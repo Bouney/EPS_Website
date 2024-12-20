@@ -1,112 +1,172 @@
 <!DOCTYPE html>
-
-<html>
-
-
-<!-- Mirrored from elginparksecondary.com/forms.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 Dec 2024 01:41:45 GMT -->
+<html lang="en" class="scroll-smooth">
 <head>
-  <link rel="stylesheet" href="forms.css">
-  <link rel="icon" type="image/x-icon" href="elgin_logo.png">
-<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<title>Elgin Park Secondary</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - Elgin Park Secondary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="elgin_logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: opacity 150ms ease-in-out, transform 150ms ease-in-out, visibility 150ms;
+        }
+        
+        .group:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu:hover {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
 </head>
-<body>
+<body class="font-['Open_Sans'] bg-gray-50">
+    <!-- Hero Section -->
+    <div class="relative h-[40vh]">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/60">
+            <img src="scool.jpg" class="w-full h-full object-cover -z-10 mix-blend-overlay" alt="School">
+        </div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+            <h1 class="text-5xl md:text-7xl font-bold text-center mb-4">Forms</h1>
+            <p class="text-2xl md:text-3xl">Download Important Documents</p>
+        </div>
+    </div>
 
-<div class="hero-image">
-  <div class="hero-text">
-    <p class="p1"> Elgin Park Secondary </p>
-    <p class="p2"> 2024-2025 Course Information </p>
-  </div>
-</div>
-<ul class="l1">
-      <a href="home.html"><img src="elgin_logo.png" id="img1" /></a>
-      <div class="NavItem">
-        <li><button onclick="location.href='home.html'">Home</button></li>
-        <li class="dropdown">
-          <button class="dropbtn1">Departments</button>
-          <div class="dropdown-content">
-            <a class="dropbtn2" href="business.html">Business Education</a>
-            <a class="dropbtn2" href="careers.html">Career Education</a>
-            <a class="dropbtn2" href="ell.html">English Language Learning</a>
-            <a class="dropbtn2" href="fine_arts.html">Fine Arts</a>
-            <a class="dropbtn2" href="home_ec.html">Home Economics</a>
-            <a class="dropbtn2" href="english.html">Language Arts</a>
-            <a class="dropbtn2" href="language_arts.html">Languages</a>
-            <a class="dropbtn2" href="mathematics.html">Mathematics</a>
-            <a class="dropbtn2" href="physical_ed.html">Physical Education</a>
-            <a class="dropbtn2" href="science.html">Sciences</a>
-            <a class="dropbtn2" href="social_studies.html">Social Studies</a>
-            <a class="dropbtn2" href="tech_ed.html">Technology Education</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          <button class="dropbtn1">Specialized Programs</button>
-          <div class="dropdown-content">
-            <a class="dropbtn2" href="advanced_placement.html">Advanced Placement</a>
-            <a class="dropbtn2" href="leadership.html">Leadership</a>
-          </div>
-        </li>
-<li>	<button onclick="location.href='forms.html'">Forms</button></li>
-<li>	<button  onclick="location.href='contact.html'">Contact</button></li>
-      </div>
-    </ul>
-<div id="main">
-    <div id="textSpace">
-      <div id="p1">Forms (Downloads)</div>
-      <div id="layout1">
-          <center>
-        <div class="downloadableContent">Math Flowchart<hr class="downloadLine">
-        <a href="math_flowchart.png" download>
-          <img src="math_flowchart.png" alt="Math_flowchart" width="404" height="442">
-        </a>
-      </div>
-              <section id="sct"></section>
-        <div class="downloadableContent">Selecting Courses<hr class="downloadLine">
-          <a href="csf.pdf" download>
-            <img src="csf.png" alt="slecting courses" width="404" height="442">
-          </a>
+    <!-- Navigation -->
+    <nav class="bg-[#40263B] border-b-8 border-[#4D42B3] sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-[90px]">
+                <a href="index.html" class="flex items-center">
+                    <img src="elgin_logo.png" class="h-16 w-auto" alt="Elgin Logo">
+                </a>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-white hover:text-gray-200 transition">Home</a>
+                    <div class="relative group">
+                        <button class="text-white hover:text-gray-200 transition">Departments</button>
+                        <div class="dropdown-menu absolute w-64 bg-white shadow-lg rounded-md mt-2">
+                            <div class="py-2">
+                                <a href="business.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Business Education</a>
+                                <a href="careers.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Career Education</a>
+                                <a href="ell.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">English Language Learning</a>
+                                <a href="fine_arts.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Fine Arts</a>
+                                <a href="home_ec.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home Economics</a>
+                                <a href="english.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Language Arts</a>
+                                <a href="language_arts.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Languages</a>
+                                <a href="mathematics.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Mathematics</a>
+                                <a href="physical_ed.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Physical Education</a>
+                                <a href="science.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Sciences</a>
+                                <a href="social_studies.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Social Studies</a>
+                                <a href="tech_ed.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Technology Education</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="text-white hover:text-gray-200 transition">Specialized Programs</button>
+                        <div class="dropdown-menu absolute w-64 bg-white shadow-lg rounded-md mt-2">
+                            <div class="py-2">
+                                <a href="advanced_placement.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Advanced Placement</a>
+                                <a href="leadership.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Leadership</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="forms.html" class="text-white hover:text-gray-200 transition">Forms</a>
+                    <a href="contact.html" class="text-white hover:text-gray-200 transition">Contact</a>
+                </div>
+            </div>
         </div>
-        <div class="downloadableContent">Library Science Form<hr class="downloadLine">
-          <a href="library_form.pdf" download>
-            <img src="library_form.png" alt="library_form" width="404" height="442">
-          </a>
-        </div>
-        <div class="downloadableContent">Language Flowchart<hr class="downloadLine">
-          <a href="lang_fc.png" download>
-            <img src="lang_fc.png" alt="language flowchart" width="404" height="200">
-          </a>
-        </div>
-        
-        <div class="downloadableContent">Co-op Form<hr class="downloadLine">
-          <a href="2024-25%20ELGIN%20PARK%20CO-OP%20APPLICATION%20WITH%20TEACHER%20REFERENCES.pdf" download>
-            <img src="eps_coop.png" alt="language flowchart" width="404" height="442">
-          </a>
-        </div>
-        <div class="downloadableContent">Graduation Planning Chart<hr class="downloadLine">
-          <a href="2023-2024%20Graduation%20Planning%20Chart%20Gr%2010-12.pdf" download>
-            <img src="yes.png" alt="language flowchart" width="404" height="442">
-          </a>
-        </div>
-        
-        <div class="downloadableContent">Grade 7 - Chart 1<hr class="downloadLine">
-          <a href="chart1.png" download>
-            <img src="chart1.png" alt="language flowchart" width="404" height="442">
-          </a>
-        </div>
-        <div class="downloadableContent">French Flowchart<hr class="downloadLine">
-          <a href="French%20Flow%20Chart.pdf" download>
-            <img src="french_chart.png" alt="language flowchart" width="404" height="442"></a></div>
-        
-        </center>
-        </div>
-</div>
+    </nav>
 
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Math Flowchart -->
+            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:-translate-y-2 transition-all duration-300">
+                <h3 class="text-xl font-bold text-purple-800 mb-4">Math Flowchart</h3>
+                <a href="math_flowchart.png" download class="block">
+                    <img src="math_flowchart.png" alt="Math Flowchart" class="w-full h-auto rounded-lg hover:opacity-80 transition-opacity">
+                </a>
+            </div>
 
+            <!-- Selecting Courses -->
+            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:-translate-y-2 transition-all duration-300">
+                <h3 class="text-xl font-bold text-purple-800 mb-4">Selecting Courses</h3>
+                <a href="csf.pdf" download class="block">
+                    <img src="csf.png" alt="Selecting Courses" class="w-full h-auto rounded-lg hover:opacity-80 transition-opacity">
+                </a>
+            </div>
 
+            <!-- Library Science Form -->
+            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:-translate-y-2 transition-all duration-300">
+                <h3 class="text-xl font-bold text-purple-800 mb-4">Library Science Form</h3>
+                <a href="library_form.pdf" download class="block">
+                    <img src="library_form.png" alt="Library Form" class="w-full h-auto rounded-lg hover:opacity-80 transition-opacity">
+                </a>
+            </div>
 
+            <!-- Language Flowchart -->
+            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:-translate-y-2 transition-all duration-300">
+                <h3 class="text-xl font-bold text-purple-800 mb-4">Language Flowchart</h3>
+                <a href="lang_fc.png" download class="block">
+                    <img src="lang_fc.png" alt="Language Flowchart" class="w-full h-auto rounded-lg hover:opacity-80 transition-opacity">
+                </a>
+            </div>
 
+            <!-- Co-op Form -->
+            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:-translate-y-2 transition-all duration-300">
+                <h3 class="text-xl font-bold text-purple-800 mb-4">Co-op Form</h3>
+                <a href="2024-25%20ELGIN%20PARK%20CO-OP%20APPLICATION%20WITH%20TEACHER%20REFERENCES.pdf" download class="block">
+                    <img src="eps_coop.png" alt="Co-op Form" class="w-full h-auto rounded-lg hover:opacity-80 transition-opacity">
+                </a>
+            </div>
+
+            <!-- Graduation Planning Chart -->
+            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:-translate-y-2 transition-all duration-300">
+                <h3 class="text-xl font-bold text-purple-800 mb-4">Graduation Planning Chart</h3>
+                <a href="2023-2024%20Graduation%20Planning%20Chart%20Gr%2010-12.pdf" download class="block">
+                    <img src="yes.png" alt="Graduation Planning" class="w-full h-auto rounded-lg hover:opacity-80 transition-opacity">
+                </a>
+            </div>
+
+            <!-- Grade 7 Chart -->
+            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:-translate-y-2 transition-all duration-300">
+                <h3 class="text-xl font-bold text-purple-800 mb-4">Grade 7 - Chart 1</h3>
+                <a href="chart1.png" download class="block">
+                    <img src="chart1.png" alt="Grade 7 Chart" class="w-full h-auto rounded-lg hover:opacity-80 transition-opacity">
+                </a>
+            </div>
+
+            <!-- French Flowchart -->
+            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:-translate-y-2 transition-all duration-300">
+                <h3 class="text-xl font-bold text-purple-800 mb-4">French Flowchart</h3>
+                <a href="French%20Flow%20Chart.pdf" download class="block">
+                    <img src="french_chart.png" alt="French Flowchart" class="w-full h-auto rounded-lg hover:opacity-80 transition-opacity">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 text-gray-600 py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-center mb-6">
+                The students and staff at Elgin Park Secondary work, learn, and play on the unceded and ancestral territories of the Katzie, Semihamoo, Kwantlen and other Coast Salish Peoples.
+            </p>
+            <div class="flex justify-center space-x-8">
+                <img src="kwantlen.png" class="h-20" alt="Kwantlen">
+                <img src="katzie.png" class="h-20" alt="Katzie">
+                <img src="semiahmoo.png" class="h-20" alt="Semiahmoo">
+            </div>
+        </div>
+    </footer>
 </body>
-
-
-<!-- Mirrored from elginparksecondary.com/forms.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 Dec 2024 01:41:57 GMT -->
 </html>
