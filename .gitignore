@@ -3,25 +3,6 @@
 email-templates/
 .wrangler/
 node_modules/
-# this is used for a local testing server, we should still use cf pages
-site/.htaccess
 
 # /site
-site/departments/*
-site/specialized/*
-site/index.html
-site/clubs.html
-site/404.html
-site/edit-requests.html
-site/contact.html
-site/forms.html
-site/.wrangler/
-site/elSSGin/*
-site/resources/lib/node_modules/
-site/sitemap.txt
-site/orca-news/*
-# "keepers". they MUST exist, to prevent dir not found failing build
-!site/departments/_
-!site/specialized/_
-!site/orca-news/_
-!site/elSSGin/_
+/site/

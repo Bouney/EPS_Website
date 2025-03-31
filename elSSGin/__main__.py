@@ -2,6 +2,7 @@ import os
 import sys
 import re
 import shutil
+from pathlib import Path
 from datetime import datetime, timezone
 
 # import json5 as json
@@ -80,18 +81,27 @@ def bob(template: jinja2.Template,
         **params
     )
 
-site_path = '../site'
+root = Path('..')
+site_path = root / 'site'
 
-# Delete existing files so that deleted data doesn't resurface
-for directory in ['departments', 'specialized', 'orca-news']:
-    for file in os.scandir(os.path.abspath('../site/' + directory)):
-        path = os.path.join(directory, file.path)
-        if os.path.isdir(os.path.abspath(path)):
-            if os.path.isfile(path) and file.path[-1] != '_':
-                os.remove(path)
-            elif os.path.isdir(path):
-                shutil.rmtree(path)
-print('Deleted old files')
+# Delete existing site
+if os.path.exists(site_path):
+    shutil.rmtree(site_path)
+print('Deleted site contents')
+
+# Copy resources
+shutil.copytree(root / 'static', site_path)
+print('Copied static')
+
+# Create directories
+for dir in [
+    'elSSGin/pods',
+    'departments',
+    'specialized',
+    'orca-news',
+]:
+    os.makedirs(site_path / dir)
+print('Created directories')
 
 # index
 write_file('%s/index.html' % site_path,
