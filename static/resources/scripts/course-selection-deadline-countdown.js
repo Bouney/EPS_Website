@@ -8,8 +8,7 @@ window.addEventListener("load", async (event) => {
 
     const deadlineString = deadlineCountdown.attributes['datetime'].nodeValue;
     const deadline = new Date(deadlineString);
-    console.log(`The deadline is ${deadlineString}`);
-    console.log(deadline);
+    console.log('The deadline is:', deadline, 'String:', deadlineString, 'Unix:', deadline.getTime() / 1000);
 
     const updater = setInterval(function() {
       const now = new Date();
