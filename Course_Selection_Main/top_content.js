@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Add navbar HTML
     document.body.insertAdjacentHTML("afterbegin", `
         <ul class="l1">
-            <a href="home.html"><img src="./elgin_logo.png" id="img1"></a>
+            <a href="home.html"><img src="./elgin_logo.png" id="ElginParkOrcaImage"></a>
             <div class="NavItem">
                 <li><button onclick="location.href='home.html'">Home</button></li>
                 <li><button onclick="location.href='cal.html'">Calendar</button></li>

@@ -182,7 +182,7 @@ html {
     padding: 1%;
     color:#333;
     height: 20%;
-    background-color: lavendar;
+    background-color:#e6e6fa;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 150%;
     font-size: 14px;
@@ -260,17 +260,18 @@ html {
     padding-right: 2rem;
 }
 
+/* 
 #main {
     margin-top: inherit;
     /* !No padding so sectioners flow into each other */
     /* padding-top: 0.5%;
-    padding-bottom: 0.5%; */
+    padding-bottom: 0.5%; *//*
     background-image: url('bg.jpg');
     background-repeat: repeat;
     filter: grayscale(20%);
     background-attachment: fixed;
     height: auto;
-}
+} */
 
 #sectionerWhite,
 #sectionerAlt {
