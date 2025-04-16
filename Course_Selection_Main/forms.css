@@ -151,17 +151,6 @@ html {
     /* overflow: auto;
 } */
 
-#main {
-    margin-top: inherit;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    height: auto;
-    background-image: url('bg.jpg');
-    background-repeat: repeat;
-    filter: grayscale(20%);
-    background-attachment: fixed;
-}
-
 #p1 {
     color: black;
     padding-top: 2%;
@@ -194,17 +183,6 @@ html {
     display: inline-block;
 } */
 
-#textSpace {
-    top: 0px;
-    height: auto;
-    width: inherit;
-    padding-bottom: 5%;
-    margin-right: 12%;
-    margin-left: 12%;
-    background-color: white;
-    overflow: clip;
-    border-radius: 15px;
-}
 
 #article1Title {
     font-size: 30px;
