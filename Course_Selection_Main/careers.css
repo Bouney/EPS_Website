@@ -371,6 +371,11 @@ h2 {
     border-top: solid 3px;
 }
 
+#topFillerAlt {
+    background-color:lavender;
+    height:80px;
+}
+
 #classTopTextBox {
     display: flex;
     background-color: #e6e6fa;
