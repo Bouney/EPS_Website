@@ -177,7 +177,7 @@ html {
 
 #boxReq {
     border-style: solid;
-    margin: 2% 1.5%;
+    margin: 2.5% 2%;
     width: 18.5%;
     padding: 1%;
     color:#333;
@@ -259,19 +259,6 @@ html {
     border-left: 4px solid white;
     padding-right: 2rem;
 }
-
-/* 
-#main {
-    margin-top: inherit;
-    /* !No padding so sectioners flow into each other */
-    /* padding-top: 0.5%;
-    padding-bottom: 0.5%; *//*
-    background-image: url('bg.jpg');
-    background-repeat: repeat;
-    filter: grayscale(20%);
-    background-attachment: fixed;
-    height: auto;
-} */
 
 #sectionerWhite,
 #sectionerAlt {

@@ -166,12 +166,10 @@ html {
 }
 
 #textSpace {
-    position: absolute;
-    top: 170px;
+    position: relative;
     height: auto;
     width: inherit;
     padding-bottom: 5%;
-    background-color: white;
     overflow: clip;
 }
 
@@ -224,15 +222,6 @@ video {
     width: 900px;
 }
 
-#layout1 {
-    margin-top: 5%;
-    width: inherit;
-    margin-right: 10%;
-    margin-left: 10%;
-    height: auto;
-    border-style: solid;
-    box-shadow: 8px 8px 8px 1px rgba(0, 0, 255, .2);
-}
 
 h1,
 h2 {
@@ -241,9 +230,13 @@ h2 {
 }
 
 .texts {
+    font-size: 20px;
     margin-left: 2%;
     margin-right: 2%;
-    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .grade8 {
@@ -377,23 +370,45 @@ h2 {
 }
 
 #classTopTextBox {
-    display: flex;
-    background-color: #e6e6fa;
-    color: #000000;
-    height:50px;
     width: 90%;
-    position: absolute;
     padding: 20px 5%;
-    top: 80px;
-    color: rgb(66, 43, 66);
     font-size: 50px;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
     margin: auto;
     align-items: center;
 }
 
-/* copied from a western website, WIP
+/* this is the layout for the main text of the department pages*/
+#layout1 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: inherit;
+    padding-right: 5%;
+    padding-left: 5%;
+    height: auto;
+}
+
+.colourLavender {
+    color: #000000;
+    background-color: lavender;
+}
+
+.colourLightBlue {
+    color: #000000;
+    background-color: #e6edfa;
+}
+
+.colourLightGray {
+    color: black;
+    background-color: #c9c9dd;
+}
+
+/* end of main text box layout */
+
+
+/* OK to delete
+
 .cta-button-group .btn-western-purple-light {
     border: 1px solid #201436;
     border-radius: 0px;
