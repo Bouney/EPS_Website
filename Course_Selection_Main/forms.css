@@ -137,20 +137,6 @@ html {
     margin-right: 10%;
 }
 
-/* #navbar {
-    background-color: #40263B;
-    height: 90px;
-    width: 100%;
-    border-bottom-style: solid;
-    border-width: 8px;
-    border-color: #4D42B3;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0; */
-    /* required */
-    /* overflow: auto;
-} */
-
 #main {
     margin-top: inherit;
     padding-top: 0.5%;
@@ -178,21 +164,6 @@ html {
     margin-right: 2%;
     font-weight: bold;
 }
-
-/* .navB {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.navbarItem1 {
-    font-size: 30px;
-    text-decoration: none;
-    color: white;
-    margin-top: 24px;
-    margin-left: 1%;
-    display: inline-block;
-} */
 
 #textSpace {
     top: 0px;
@@ -239,140 +210,6 @@ html {
     font-weight: 50;
 }
 
-/* .l1 {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #40263b;
-    height: 90px;
-    width: 100%;
-    border-bottom-style: solid;
-    border-width: 8px;
-    border-color: #4D42B3;
-}
-
-.l1 li {
-    float: left;
-} */
-
-/* li button,
-.dropbtn1 {
-    border: none;
-    padding: 0px 15px;
-    display: inline-block;
-    color: white;
-    text-align: center;
-    font-size: 20px;
-    text-decoration: none;
-    cursor: pointer;
-    list-style-type: none;
-    overflow: hidden;
-    background-color: #40263b;
-    height: 90px;
-    width: 100%;
-}
-
-li.dropdown {
-    transition: ease-in-out 0.5s;
-    display: inline-block;
-}
-
-.dropdown-content {
-    margin-left: 20px;
-    transition: ease-in-out 0.5s;
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    width: inherit;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-    transition: ease-in-out 0.5s;
-    display: block;
-}
-
-.dropdown:active .dropdown-content {
-    transition: ease-in-out 0.5s;
-    display: block;
-}
-
-.dropdown:focus .dropdown-content {
-    transition: ease-in-out 0.5s;
-    display: block;
-}
-
-.dropdown-content a {
-    transition: ease-in-out 0.5s;
-    color: black;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    cursor: pointer;
-}
-
-.dropdown-content a:hover {
-    transition: ease-in-out 0.5s;
-    color: black;
-    background-color: #f1f1f1;
-}
-
-li a div,
-.dropbtn2 {
-    margin-left: 25px;
-    margin-right: 25px;
-    border: none;
-    padding: 16px 32px;
-    border-radius: 20px;
-    display: inline-block;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    transition: ease-in-out 0.5s;
-}
-
-.dropdown-content2 {
-    transition: ease-in-out 0.5s;
-    position: absolute;
-    background-color: #f9f9f9;
-    width: inherit;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    display: none;
-}
-
-.dropdown-content2 a {
-    transition: ease-in-out 0.5s;
-    color: black;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    cursor: pointer;
-}
-
-.dropdown-content2 a:hover {
-    transition: ease-in-out 0.5s;
-    color: black;
-    background-color: #f1f1f1;
-}
-
-.db1:hover .dropdown-content2 {
-    transition: ease-in-out 0.5s;
-    display: block;
-}
-
-.NavItem {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    font-size: x-large;
-    z-index: 10;
-    justify-content: center;
-    align-items: center;
-} */
-
 #ul1 {
     color: black;
     font-size: 20px;
@@ -393,17 +230,6 @@ li a div,
 video {
     height: 600px;
     width: 900px;
-}
-
-#layout1 {
-    margin-top: 5%;
-    width: inherit;
-    margin-right: 10%;
-    margin-left: 10%;
-    overflow: auto;
-    height: auto;
-    border-style: solid;
-    box-shadow: 8px 8px 8px 1px rgba(0, 0, 255, .2);
 }
 
 h1,
@@ -524,6 +350,15 @@ h2 {
     padding: 11px;
 }
 
+/* Add a new class for the container */
+.downloadContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;  /* Optional: space between items */
+}
+
+/* Update downloadableContent styles */
 .downloadableContent {
     padding-top: 8px;
     line-height: 30px;
@@ -531,14 +366,19 @@ h2 {
     border-radius: 10px;
     border-color: black;
     text-align: center;
-    margin-left: 2%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin: 2% auto;
     font-size: 20px;
-    float: left;
     width: 404px;
+    /* Remove float:left; so the flex container can manage positioning */
 }
 
 .downloadLine {
     border-top: solid 3px;
+}
+
+#line2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
