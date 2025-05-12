@@ -2,6 +2,12 @@
 
 ![1.00](https://elginparksecondary.com/elgin_logo.png)
 
+**Preview: https://main.eps-website-elssgin-twonfi.pages.dev/home**
+
+Needs to be manually synced until this repo is transferred to the @elginpark organization and twonfi can set up Cloudflare Pages.
+
+***
+
 Welcome to the **EPS Website** repository! This repository contains the official source code for the Elgin Park School website, proudly developed and maintained by the **EPS Computer Club**.
 
 ***
