@@ -133,9 +133,11 @@ li.dropdown {
 /* Header Images */
 
 #img1 {
-    padding-top: 5px;
-    padding-left: 5px;
-    height: var(--header-img-height);
-    width: var(--header-img-width);
+    padding-top: 15px;
+    padding-left: 15px;
+    height: calc(0.65 * var(--header-img-height));
+    width: calc(0.65 * var(--header-img-width));
     position: absolute;
+    
+    left: 0;
 }
