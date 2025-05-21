@@ -42,7 +42,7 @@ html {
     cursor: pointer;
     outline: none;
     color: #fff;
-    background-color: #40263B;
+    background-color: #563869;
     position: relative;
     font-size: 22px;
     font-weight: bold;
@@ -53,7 +53,7 @@ html {
 }
 
 #anchor:hover {
-    background-color: #332B50;
+    background-color: #44254e;
 }
 
 .div-img {
@@ -365,7 +365,6 @@ h2 {
 }
 
 #topFillerAlt {
-    background-color:lavender;
     height:80px;
 }
 
@@ -374,7 +373,6 @@ h2 {
     padding: 20px 5%;
     font-size: 50px;
     text-align: center;
-    font-weight: bold;
     margin: auto;
     align-items: center;
 }
@@ -396,33 +394,20 @@ h2 {
 
 .colourLightBlue {
     color: #000000;
-    background-color: #e6edfa;
+    background-color: #e0e4e9;
 }
 
 .colourLightGray {
     color: black;
-    background-color: #c9c9dd;
+    background-color: #d4d5d8;
 }
+
+
 
 /* end of main text box layout */
 
 
-/* OK to delete
-
-.cta-button-group .btn-western-purple-light {
-    border: 1px solid #201436;
-    border-radius: 0px;
-}
-.btn-western-purple-light {
-    padding: 10px 18px;
-    background: #4F2683;
-    border-radius: 4px;
-    color: #FFFFFF;
+.largeHeading {
     text-align: center;
-    border: 2px solid transparent;
-    text-decoration: none;
-    font-family: 'BentonSans Book';
-    font-size: 1rem;
-    line-height: 25px;
+    font-size: 2.5em;
 }
-*/

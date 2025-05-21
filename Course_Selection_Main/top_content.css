@@ -26,7 +26,7 @@ html {
     padding: 0;
     overflow: visible;
     /* Changed to allow dropdown overflow */
-    background-color: #40263b;
+    background-image: linear-gradient(to bottom right, #562774, #431f58);
     height: var(--navbar-height);
     width: 100%;
     position: fixed;
@@ -55,7 +55,7 @@ li button,
     font-size: 20px;
     text-decoration: none;
     cursor: pointer;
-    background-color: #40263b;
+    background-color: transparent;
     height: var(--navbar-height);
     width: 100%;
 }
@@ -126,7 +126,7 @@ li.dropdown {
 }
 
 .NavItem button:hover {
-    background-color: #332333;
+    background-color: #542472;
 }
 
 
