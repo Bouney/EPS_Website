@@ -75,7 +75,7 @@ html {
 
 #counsellorsTable th {
     font-size: 1.3em;
-    background-color: #5e3356;
+    background-color: #6b2796;
     color: white;
     padding: 12px;
     text-align: middle;
@@ -264,6 +264,6 @@ table {
 hr {
     border: 0;
     height: 2px;
-    background-color: purple;
+    background-color: #6b2796;
     margin: 10px 0;
 }
