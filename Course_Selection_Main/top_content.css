@@ -31,7 +31,7 @@ body {
     margin: 0;
     padding: 0 20px; /* Add some horizontal padding */
     overflow: visible;
-    background-color: var(--navbar-background);
+    background-image: linear-gradient(to bottom right, #562774, #431f58);
     height: var(--navbar-height);
     width: 100%;
     position: fixed;
@@ -132,8 +132,6 @@ li.dropdown {
     gap: 0px; /* No gap if items are full width */
     opacity: 0;
     visibility: hidden;
-    border-top: 3px solid var(--navbar-background); /* Accent */
-    border-radius: 0 0 4px 4px;
 }
 
 .dropdown:hover .dropdown-content,
