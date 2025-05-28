@@ -52,4 +52,6 @@ This project is made possible thanks to the hard work and dedication of the foll
 
 *Eric Li*
 
+*David Duan*
+
 * **Enter your name here if you want to be recognized**
