@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Add navbar HTML
+    // Note: ElginParkOrcaImage is wrapped in an <a> tag pointing to home.html
     document.body.insertAdjacentHTML("afterbegin", `
         <ul class="l1">
-            <a href="home.html"><img src="./elgin_logo.png" id="ElginParkOrcaImage"></a>
+            <a href="home.html"><img src="./elgin_logo.png" id="ElginParkOrcaImage" alt="Elgin Park Orca Logo"></a>
             <div class="NavItem">
-                <li><button onclick="location.href='home.html'">Home</button></li>
-                <li><button onclick="location.href='cal.html'">Calendar</button></li>
+                <li><button data-page="home.html" onclick="location.href='home.html'">Home</button></li>
+                <li><button data-page="cal.html" onclick="location.href='cal.html'">Calendar</button></li>
                 <li class="dropdown">
                     <button class="dropbtn1">Departments</button>
                     <div class="dropdown-content">
@@ -30,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function() {
                         <a class="dropbtn2" href="leadership.html">Leadership</a>
                     </div>
                 </li>
-                <li> <button onclick="location.href='forms.html'">Forms</button></li>
-                <li><button onclick="location.href='HybridLearning.html'">Hybrid Learning</button></li>
-                <li> <button onclick="location.href='contact.html'">Contact</button></li>
+                <li><button data-page="forms.html" onclick="location.href='forms.html'">Forms</button></li>
+                <li><button data-page="HybridLearning.html" onclick="location.href='HybridLearning.html'">Hybrid Learning</button></li>
+                <li><button data-page="contact.html" onclick="location.href='contact.html'">Contact</button></li>
             </div>
         </ul>
     `);
@@ -41,16 +42,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const navbar = document.querySelector('.l1');
     let lastScroll = 0;
 
-    // Debounce functions
-    function debounce(func, wait = 40) {
+    // Debounce function
+    function debounce(func, wait = 20) { // Reduced wait time for responsiveness
         let timeout;
-        return function() {
+        return function(...args) {
             const context = this;
-            const args = arguments;
             clearTimeout(timeout);
-            timeout = setTimeout(() => {
-                func.apply(context, args);
-            }, wait);
+            timeout = setTimeout(() => func.apply(context, args), wait);
         };
     }
 
@@ -58,69 +56,47 @@ document.addEventListener("DOMContentLoaded", function() {
     function handleScroll() {
         const currentScroll = window.pageYOffset;
 
-        // Scrolling down - hide navbar
-        if (currentScroll > lastScroll && currentScroll > 60) {
-            navbar.classList.add('nav-hidden');
+        if (navbar) { // Check if navbar exists
+            // Scrolling down and past navbar height - hide navbar
+            if (currentScroll > lastScroll && currentScroll > navbar.offsetHeight) {
+                navbar.classList.add('nav-hidden');
+            }
+            // Scrolling up - show navbar
+            else if (currentScroll < lastScroll) {
+                navbar.classList.remove('nav-hidden');
+            }
         }
-        // Scrolling up - show navbar
-        else if (currentScroll < lastScroll) {
-            navbar.classList.remove('nav-hidden');
-        }
-
-        lastScroll = currentScroll;
+        lastScroll = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
     }
-
-
-    //!Memory optimization stuff idk I chatgpt this shit
-    // Cache DOM references
-    const dropdowns = document.querySelectorAll('.dropdown');
-    const dropdownContents = document.querySelectorAll('.dropdown-content');
 
     // Add passive scroll event listener
     const debouncedScroll = debounce(handleScroll);
     window.addEventListener('scroll', debouncedScroll, { passive: true });
 
-    // Cleanup when page is hidden
+    // Active link highlighting
+    const currentPage = window.location.pathname.split("/").pop(); // Get the current page file name
+    if (navbar) { // Check if navbar exists
+        const navButtons = navbar.querySelectorAll('.NavItem button[data-page]');
+        navButtons.forEach(button => {
+            if (button.getAttribute('data-page') === currentPage) {
+                button.classList.add('active-link');
+            }
+        });
+        // Special case for home page if URL is just '/' or 'index.html'
+        if (currentPage === '' || currentPage === 'index.html') {
+            const homeButton = navbar.querySelector('.NavItem button[data-page="home.html"]');
+            if (homeButton) homeButton.classList.add('active-link');
+        }
+    }
+
+    // Dropdown hover/focus is handled by CSS, JS for this is removed to simplify.
+    // Memory optimization for dropdowns is less critical if relying on CSS :hover.
+    // Cleanup on visibility change can still be useful for scroll listener.
     document.addEventListener('visibilitychange', () => {
         if (document.hidden) {
             window.removeEventListener('scroll', debouncedScroll);
-            dropdowns.forEach(dropdown => {
-                dropdown.removeEventListener('mouseenter', showDropdown);
-                dropdown.removeEventListener('mouseleave', hideDropdown);
-            });
         } else {
             window.addEventListener('scroll', debouncedScroll, { passive: true });
-            // Reattach dropdown events if needed
-        }
-    });
-
-    // Debounce dropdown animations
-    const showDebounced = debounce(showDropdown, 15);
-    const hideDebounced = debounce(hideDropdown, 15);
-
-    dropdowns.forEach(dropdown => {
-        dropdown.addEventListener('mouseenter', showDebounced);
-        dropdown.addEventListener('mouseleave', hideDebounced);
-    });
-
-    // Dropdown functions
-    function showDropdown() {
-        this.querySelector('.dropdown-content').style.opacity = '1';
-        this.querySelector('.dropdown-content').style.visibility = 'visible';
-    }
-
-    function hideDropdown() {
-        this.querySelector('.dropdown-content').style.opacity = '0';
-        this.querySelector('.dropdown-content').style.visibility = 'hidden';
-    }
-
-    // Reattach dropdown events when page becomes visible again
-    document.addEventListener('visibilitychange', () => {
-        if (!document.hidden) {
-            dropdowns.forEach(dropdown => {
-                dropdown.addEventListener('mouseenter', showDebounced);
-                dropdown.addEventListener('mouseleave', hideDebounced);
-            });
         }
     });
 });
