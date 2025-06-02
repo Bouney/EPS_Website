@@ -4,7 +4,8 @@
     --header-img-width: 95px; /* Scaled proportionally */
     --navbar-background: #3A2E39; /* Dark purple from image inspiration */
     --nav-link-color: #FFFFFF;
-    --nav-link-hover-color: #F0F0F0;
+    --nav-link-hover-color: #e6e6ee;
+    --nav-dropdown-content-hover-color: #000000;
     --nav-link-active-underline: #FFD700; /* Gold/Yellow for active link */
     --page-background: #F0F2F5; /* Light grey for page body */
     --text-color: #333333;
@@ -96,13 +97,18 @@ li button,
 }
 
 .NavItem button:hover,
-.dropbtn1:hover,
-.l1 li a:hover { /* If using <a> tags directly for nav links */
+.dropbtn1:hover{ /* If using <a> tags directly for nav links */
     color: var(--nav-link-hover-color);
     border-bottom-color: var(--nav-link-hover-color);
 }
 
+.l1 li a:hover {
+    color: var(--nav-dropdown-content-hover-color);
+    border-bottom-color: var(--nav-dropdown-content-hover-color);
+}
+
 .NavItem button.active-link,
+.NavItem li.active-link,
 .l1 li a.active-link { /* For active page */
     color: var(--nav-link-color); /* Or a slightly brighter white */
     border-bottom-color: var(--nav-link-active-underline);
