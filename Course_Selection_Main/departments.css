@@ -11,7 +11,7 @@
     font-size: 2.5em; /* Large title */
     font-weight: bold;
     color: var(--text-color);
-    margin-bottom: 10px; /* Space below main title */
+    margin-bottom: 50px; /* Space below main title */
     text-align: left;
 }
 
