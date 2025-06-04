@@ -4,7 +4,8 @@
     --header-img-width: 95px; /* Scaled proportionally */
     --navbar-background: #3A2E39; /* Dark purple from image inspiration */
     --nav-link-color: #FFFFFF;
-    --nav-link-hover-color: #F0F0F0;
+    --nav-link-hover-color: #e6e6ee;
+    --nav-dropdown-content-hover-color: #000000;
     --nav-link-active-underline: #FFD700; /* Gold/Yellow for active link */
     --page-background: #F0F2F5; /* Light grey for page body */
     --text-color: #333333;
@@ -31,7 +32,7 @@ body {
     margin: 0;
     padding: 0 20px; /* Add some horizontal padding */
     overflow: visible;
-    background-color: var(--navbar-background);
+    background-image: linear-gradient(to bottom right, #562774, #431f58);
     height: var(--navbar-height);
     width: 100%;
     position: fixed;
@@ -96,15 +97,19 @@ li button,
 }
 
 .NavItem button:hover,
-.dropbtn1:hover,
-.l1 li a:hover { /* If using <a> tags directly for nav links */
+.dropbtn1:hover{ /* If using <a> tags directly for nav links */
     color: var(--nav-link-hover-color);
     border-bottom-color: var(--nav-link-hover-color);
 }
 
+.l1 li a:hover {
+    color: var(--nav-dropdown-content-hover-color);
+    border-bottom-color: var(--nav-dropdown-content-hover-color);
+}
+
 .NavItem button.active-link,
-.l1 li a.active-link { /* For active page */
-    color: var(--nav-link-color); /* Or a slightly brighter white */
+.NavItem li.active-link,
+.l1 li a.active-link {
     border-bottom-color: var(--nav-link-active-underline);
     font-weight: bold;
 }
@@ -132,8 +137,6 @@ li.dropdown {
     gap: 0px; /* No gap if items are full width */
     opacity: 0;
     visibility: hidden;
-    border-top: 3px solid var(--navbar-background); /* Accent */
-    border-radius: 0 0 4px 4px;
 }
 
 .dropdown:hover .dropdown-content,
