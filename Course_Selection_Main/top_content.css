@@ -107,9 +107,8 @@ li button,
     border-bottom-color: var(--nav-dropdown-content-hover-color);
 }
 
-.NavItem button.active-link,
-.NavItem li.active-link,
-.l1 li a.active-link {
+
+.active-link {
     border-bottom-color: var(--nav-link-active-underline);
     font-weight: bold;
 }

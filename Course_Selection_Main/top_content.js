@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 <li class="dropdown">
                     <button class="dropbtn1">Specialized Programs</button>
                     <div class="dropdown-content">
-                        <a class="dropbtn2" href="advanced_placement.html">Advanced Placement</a>
-                        <a class="dropbtn2" href="leadership.html">Leadership</a>
+                        <a class="dropbtn2" data-page="advanced_placement.html" href="advanced_placement.html">Advanced Placement</a>
+                        <a class="dropbtn2" data-page="leadership.html" href="leadership.html">Leadership</a>
                     </div>
                 </li>
                 <li><button data-page="forms.html" onclick="location.href='forms.html'">Forms</button></li>
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Active link highlighting
     const currentPage = window.location.pathname.split("/").pop(); // Get the current page file name
     if (navbar) { // Check if navbar exists
-        const navButtons = navbar.querySelectorAll('.NavItem button[data-page], .NavItem a[data-page]');
+        const navButtons = navbar.querySelectorAll('[data-page]');
         navButtons.forEach(button => {
             if (button.getAttribute('data-page') === currentPage) {
                 button.classList.add('active-link');
