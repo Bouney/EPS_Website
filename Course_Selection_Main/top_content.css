@@ -159,9 +159,8 @@ li.dropdown {
     color: var(--navbar-background);
 }
 
-/* Site Footer Style (can be in a global CSS or specific page CSS) */
 .site-footer {
-    background-color: var(--navbar-background);
+    background-image: linear-gradient(to bottom right, #562774, #431f58);
     color: var(--nav-link-color);
     text-align: center;
     padding: 25px 20px;
