@@ -1,4 +1,11 @@
-/* page_content.css - Generalized styles for main page content */
+/* departments.css - Generalized styles for main page content */
+
+:root { /* Ensure these variables are defined if not already in top_content.css or globally */
+    --navbar-background: #3A2E39; /* Example, adjust if needed */
+    --text-color: #333333;
+    --card-background: #FFFFFF;
+    --page-background: #F0F2F5;
+}
 
 /* General page container for content */
 .page-container {
@@ -8,36 +15,37 @@
 }
 
 .page-title {
-    font-size: 2.5em; /* Large title */
+    font-size: 2.5em;
     font-weight: bold;
     color: var(--text-color);
-    margin-bottom: 10px; /* Space below main title */
+    margin-bottom: 40px;  /* Increased space below the title */
     text-align: left;
 }
 
 .page-subtitle {
-    font-size: 1.8em; /* Subtitle */
+    font-size: 1.8em;
     font-weight: bold;
     color: var(--text-color);
     margin-top: 0;
-    margin-bottom: 30px; /* Space below subtitle */
+    margin-bottom: 30px;
     text-align: left;
 }
 
 /* Grid for content cards/items */
-.card-grid { /* Renamed from .courses-grid */
+.card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
     gap: 25px;
+    align-items: start; /* Cards align at the top, natural height */
 }
 
-.info-card { /* Renamed from .course-card */
+.info-card {
     background-color: var(--card-background);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stacks card content vertically */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
@@ -70,8 +78,7 @@
     line-height: 1;
 }
 
-/* Specific tag colors (can be extended or moved if too specific for 'general') */
-/* These are kept from the previous example as business.html uses them */
+/* Specific tag colors */
 .tag.grade-tag-8 { background-color: #A6E1FA; color: #333; }
 .tag.grade-tag-9 { background-color: #007bff; }
 .tag.grade-tag-10 { background-color: #28a745; }
@@ -80,25 +87,41 @@
 
 .tag.type-tag-elective { background-color: #dc3545; }
 .tag.type-tag-required { background-color: #6f42c1; }
+.tag.credits-tag { background-color: #17a2b8; } /* Example for a credits tag */
+.tag.info-tag { background-color: #6c757d; } /* Generic info tag */
+
 
 .info-card .description {
     font-size: 0.95em;
     line-height: 1.6;
     color: #555555;
     margin-bottom: 15px;
-    flex-grow: 1;
+    /* flex-grow: 1; Removed/Commented - allow natural height */
 }
 
-.info-card .item-identifier { /* Renamed from .course-code */
+/* Styling for lists within description for better readability */
+.info-card .description ul,
+.info-card .description ol {
+    padding-left: 20px; /* Indent list items */
+    margin-top: 5px; /* Space above the list if it follows text */
+    margin-bottom: 10px; /* Space below the list */
+}
+
+.info-card .description li {
+    margin-bottom: 5px; /* Space between list items */
+}
+
+
+.info-card .item-identifier { /* For course codes, etc. */
     font-size: 0.8em;
     color: #777777;
-    margin-top: auto;
+    margin-top: auto; /* Pushes to the bottom if card is flex column */
     padding-top: 10px;
     border-top: 1px solid #eee;
 }
 
-.info-card .action-link, /* Generalized from .video-link */
-.info-card .details-button { /* Kept .details-button as it's fairly generic */
+.info-card .action-link,
+.info-card .details-button {
     display: inline-block;
     margin-top: 15px;
     padding: 8px 15px;
@@ -108,38 +131,85 @@
     border-radius: 4px;
     text-align: center;
     transition: background-color 0.2s;
+    align-self: flex-start; /* Aligns button to the start of the cross axis if card is flex column */
 }
 
 .info-card .action-link:hover,
 .info-card .details-button:hover {
-    background-color: #503c4d;
+    background-color: #503c4d; /* Darker shade of navbar-background */
 }
 
-.info-card iframe {
+/* Container for pairing media like video and image, and centering them */
+.media-pair-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Changed from center to start for better alignment with text */
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Responsive iframe wrapper */
+.responsive-iframe-container {
+    position: relative;
+    overflow: hidden;
     width: 100%;
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    border-radius: 4px;
-    margin-top: 10px;
-    border: 1px solid #ddd;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    max-width: 560px; /* Max width for the video itself */
+    margin-left: auto; /* Center within its flex item space if max-width is hit */
+    margin-right: auto;
+    margin-bottom: 20px;
 }
 
-/* General text content styling, if needed outside cards */
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Styling for images within media-pair or standalone in cards */
+.info-card img,
+.media-pair-container img,
+.content-section img { /* General image styling within these contexts */
+    max-width: 100%; /* Make images responsive by default */
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #ddd; /* Optional subtle border */
+    display: block; /* Removes extra space below image if it's inline */
+    margin-top: 10px; /* Default top margin */
+    margin-bottom: 10px; /* Default bottom margin */
+}
+
+.media-pair-container img {
+    max-width: 400px; /* Specific max-width if paired, adjust as needed */
+    width: 100%; /* Ensures it shrinks within flex constraints */
+}
+
+
+
+
+/* General text content styling, for sections outside cards or for general info */
 .content-section {
     margin-bottom: 30px;
     padding: 20px;
-    background-color: var(--card-background); /* Optional: if sections need card-like bg */
-    border-radius: 8px; /* Optional */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Optional */
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.content-section h2 {
+.content-section h2 { /* Sub-headings within a content section */
     font-size: 1.6em;
     color: var(--text-color);
     margin-top: 0;
     margin-bottom: 15px;
-    border-bottom: 2px solid var(--page-background); /* Subtle separator */
+    border-bottom: 2px solid var(--page-background);
     padding-bottom: 10px;
 }
 
@@ -161,8 +231,7 @@
     margin-bottom: 8px;
 }
 
-
-/* Standalone button style (kept from previous careers.css) */
+/* Standalone button style (if needed outside cards) */
 .buttonC {
     border-style: solid;
     text-align: center;
@@ -188,15 +257,3 @@
     background-color: #2c1e2a;
     transform: translateY(1px);
 }
-
-/* Deprecated/Old styles from original careers.css - can be removed if not used elsewhere */
-/*
-#textSpace { padding: 20px; }
-.grade8, .grade9, .grade10, .grade11, .grade12, .req, .elec { display: none; }
-#topFillerAlt { display: none; }
-#classTopTextBox, #layout1, .colourLavender, .colourLightBlue, .colourLightGray {
-    background-color: transparent; color: inherit; padding: 0; margin: 0; border: none;
-}
-.texts { font-size: 1em; }
-#lit { list-style-type: disc; padding-left: 20px; }
-*/

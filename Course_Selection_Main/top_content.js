@@ -10,18 +10,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 <li class="dropdown">
                     <button class="dropbtn1">Departments</button>
                     <div class="dropdown-content">
-                        <a class="dropbtn2" data-page="business.html" href="business.html">Business Education</a>
-                        <a class="dropbtn2" data-page="careers.html" href="careers.html">Career Education</a>
-                        <a class="dropbtn2" data-page="ell.html" href="ell.html">English Language Learning</a>
-                        <a class="dropbtn2" data-page="fine_arts.html" href="fine_arts.html">Fine Arts</a>
-                        <a class="dropbtn2" data-page="home_ec.html" href="home_ec.html">Home Economics</a>
-                        <a class="dropbtn2" data-page="english.html" href="english.html">Language Arts</a>
-                        <a class="dropbtn2" data-page="language_arts.html" href="language_arts.html">Languages</a>
-                        <a class="dropbtn2" data-page="mathematics.html" href="mathematics.html">Mathematics</a>
-                        <a class="dropbtn2" data-page="physical_ed.html" href="physical_ed.html">Physical Education</a>
-                        <a class="dropbtn2" data-page="science.html" href="science.html">Sciences</a>
-                        <a class="dropbtn2" data-page="social_studies.html" href="social_studies.html">Social Studies</a>
-                        <a class="dropbtn2" data-page="tech_ed.html" href="tech_ed.html">Technology Education</a>
+                        <a class="dropbtn2" href="business.html">Business Education</a>
+                        <a class="dropbtn2" href="careers.html">Career Education</a>
+                        <a class="dropbtn2" href="ell.html">English Language Learning</a>
+                        <a class="dropbtn2" href="fine_arts.html">Fine Arts</a>
+                        <a class="dropbtn2" href="home_ec.html">Home Economics</a>
+                        <a class="dropbtn2" href="language_arts.html">Language Arts</a>
+                        <a class="dropbtn2" href="languages.html">Languages</a>
+                        <a class="dropbtn2" href="mathematics.html">Mathematics</a>
+                        <a class="dropbtn2" href="physical_ed.html">Physical Education</a>
+                        <a class="dropbtn2" href="science.html">Sciences</a>
+                        <a class="dropbtn2" href="social_studies.html">Social Studies</a>
+                        <a class="dropbtn2" href="tech_ed.html">Technology Education</a>
                     </div>
                 </li>
                 <li class="dropdown">
