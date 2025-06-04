@@ -109,8 +109,7 @@ li button,
 
 .NavItem button.active-link,
 .NavItem li.active-link,
-.l1 li a.active-link { /* For active page */
-    color: var(--nav-link-color); /* Or a slightly brighter white */
+.l1 li a.active-link {
     border-bottom-color: var(--nav-link-active-underline);
     font-weight: bold;
 }

@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Active link highlighting
     const currentPage = window.location.pathname.split("/").pop(); // Get the current page file name
     if (navbar) { // Check if navbar exists
-        const navButtons = navbar.querySelectorAll('.NavItem button[data-page]');
+        const navButtons = navbar.querySelectorAll('.NavItem button[data-page], .NavItem a[data-page]');
         navButtons.forEach(button => {
             if (button.getAttribute('data-page') === currentPage) {
                 button.classList.add('active-link');
