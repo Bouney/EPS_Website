@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         <a class="dropbtn2" href="ell.html">English Language Learning</a>
                         <a class="dropbtn2" href="fine_arts.html">Fine Arts</a>
                         <a class="dropbtn2" href="home_ec.html">Home Economics</a>
-                        <a class="dropbtn2" href="english.html">Language Arts</a>
-                        <a class="dropbtn2" href="language_arts.html">Languages</a>
+                        <a class="dropbtn2" href="language_arts.html">Language Arts</a>
+                        <a class="dropbtn2" href="languages.html">Languages</a>
                         <a class="dropbtn2" href="mathematics.html">Mathematics</a>
                         <a class="dropbtn2" href="physical_ed.html">Physical Education</a>
                         <a class="dropbtn2" href="science.html">Sciences</a>
