@@ -2,7 +2,7 @@
     --navbar-height: 70px; /* Adjusted height */
     --header-img-height: 50px; /* Adjusted for new navbar height */
     --header-img-width: 95px; /* Scaled proportionally */
-    --navbar-background: #3A2E39; /* Dark purple from image inspiration */
+    --navbar-background: #8830a3; /* Dark purple from image inspiration */
     --nav-link-color: #FFFFFF;
     --nav-link-hover-color: #e6e6ee;
     --nav-dropdown-content-hover-color: #000000;
@@ -157,22 +157,4 @@ li.dropdown {
 .dropdown-content a:hover {
     background-color: #e9e9e9;
     color: var(--navbar-background);
-}
-
-.site-footer {
-    background-image: linear-gradient(to bottom right, #562774, #431f58);
-    color: var(--nav-link-color);
-    text-align: center;
-    padding: 25px 20px;
-    margin-top: 40px; /* Space above footer */
-    font-size: 0.9em;
-}
-
-.site-footer a {
-    color: var(--nav-link-active-underline); /* Use accent color for links in footer */
-    text-decoration: none;
-}
-
-.site-footer a:hover {
-    text-decoration: underline;
 }
