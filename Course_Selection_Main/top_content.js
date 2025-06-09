@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Get navbar element
     const navbar = document.querySelector('.l1');
+    if (!navbar) return;
     let lastScroll = 0;
 
     // Debounce function
@@ -73,21 +74,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const debouncedScroll = debounce(handleScroll);
     window.addEventListener('scroll', debouncedScroll, { passive: true });
 
-    // Active link highlighting
-    const currentPage = window.location.pathname.split("/").pop(); // Get the current page file name
-    if (navbar) { // Check if navbar exists
-        const navButtons = navbar.querySelectorAll('.NavItem [data-page]');
-        navButtons.forEach(button => {
-            if (button.getAttribute('data-page') === currentPage) {
-                button.classList.add('active-link');
+    const currentPage = window.location.pathname.split("/").pop();
+    const navButtons = navbar.querySelectorAll('[data-page]');
+
+    navButtons.forEach(element => {
+        if (element.getAttribute('data-page') === currentPage) {
+            element.classList.add('active-link');
+
+            // Highlight the parent dropdown button too
+            const dropdown = element.closest('.dropdown');
+            if (dropdown) {
+                const parentButton = dropdown.querySelector('.dropbtn1');
+                if (parentButton) parentButton.classList.add('active-link');
             }
-        });
-        // Special case for home page if URL is just '/' or 'index.html'
-        if (currentPage === '' || currentPage === 'index.html') {
-            const homeButton = navbar.querySelector('.NavItem button[data-page="home.html"]');
-            if (homeButton) homeButton.classList.add('active-link');
         }
-    }
+    });
+
 
     // Dropdown hover/focus is handled by CSS, JS for this is removed to simplify.
     // Memory optimization for dropdowns is less critical if relying on CSS :hover.
