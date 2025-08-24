@@ -1,0 +1,9 @@
+# Disavowed links
+# format: https://support.google.com/webmasters/answer/2648487
+#
+# This is for *very* spammy links from, for example, websites that
+# only link other websites without context.
+#
+# This must be updated to GSC manually.
+# Always make a PR instead of committing directly.
+domain:primewebdirectory.com
