@@ -6,4 +6,3 @@
 #
 # This must be updated to GSC manually.
 # Always make a PR instead of committing directly.
-domain:primewebdirectory.com
