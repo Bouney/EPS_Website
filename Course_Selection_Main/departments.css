@@ -12,6 +12,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    overflow: hidden; /* Added to contain grid overflow */
 }
 
 .page-title {
@@ -34,9 +35,11 @@
 /* Grid for content cards/items */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 25px;
-    align-items: start; /* Cards align at the top, natural height */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 60px;
+    align-items: stretch;
+    margin: 0; /* Reset any default margins */
+    width: 100%; /* Ensure grid takes full width of container */
 }
 
 .info-card {
@@ -47,6 +50,9 @@
     display: flex;
     flex-direction: column; /* Stacks card content vertically */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    height: 100%; /* Add this to ensure full height */
+    width: 100%; /* Ensure card takes full width of grid cell */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .info-card:hover {
@@ -256,4 +262,36 @@
 .buttonC:active {
     background-color: #2c1e2a;
     transform: translateY(1px);
+}
+
+/* Add this new section for the navigation buttons */
+.content-section nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.content-section nav .details-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #562774; /* Changed to match navbar background */
+    color: var(--nav-link-color);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: background-color 0.2s ease-in-out;
+    border: none;
+    text-align: center;
+    min-width: 120px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-section nav .details-button:hover {
+    background-color: #6b2682; /* Darker shade of the vibrant purple */
+    transform: translateY(-1px);
+}
+
+.content-section nav .details-button:active {
+    transform: translateY(0);
 }

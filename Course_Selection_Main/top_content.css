@@ -30,12 +30,12 @@ body {
 .l1 {
     list-style-type: none;
     margin: 0;
-    padding: 0 20px; /* Add some horizontal padding */
+    padding: 0 20px;
     overflow: visible;
     background-image: linear-gradient(to bottom right, #562774, #431f58);
     height: var(--navbar-height);
     width: 100%;
-    position: fixed;
+    position: fixed; /* Keep only one position property */
     top: 0;
     left: 0;
     right: 0;
@@ -43,8 +43,7 @@ body {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Logo left, nav items center/right */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: flex-start;
 }
 
 .l1.nav-hidden {
@@ -52,10 +51,12 @@ body {
 }
 
 /* Logo specific container if needed, or direct style on <a> */
-.l1 > a { /* Direct child <a> is the logo link */
+.l1 > a { /* Logo link */
     display: flex; /* For aligning image if text was next to it */
     align-items: center;
     height: 100%;
+    flex: 0 0 auto; /* Prevent logo from growing or shrinking */
+    z-index: 2; /* Ensure logo stays above other elements */
 }
 
 #ElginParkOrcaImage {
@@ -63,35 +64,49 @@ body {
     width: var(--header-img-width);
     /* Removed position: absolute, padding-top, padding-left */
     /* Margin might be needed if not perfectly aligned by flex */
-    margin-right: 20px; /* Space between logo and nav items if NavItem is next */
+    margin-right: 0; /* Remove margin since logo positioning is now independent */
 }
 
-.NavItem { /* This div wraps the navigation li elements */
+.NavItem { 
+    position: absolute; /* Take it out of normal flow */
+    left: 0;
+    right: 0;
     display: flex;
     height: 100%;
     align-items: center;
-    justify-content: center; /* Center nav items */
-    flex-grow: 1; /* Allow it to take space if needed */
+    justify-content: center; /* Center the navigation items */
+    flex-wrap: wrap; /* Add this to handle wrapping */
+    padding: 0; /* Reset any padding */
+    pointer-events: none; /* Allow clicks to pass through the container */
+}
+
+.NavItem > li {
+    pointer-events: auto; /* Re-enable clicks on the actual buttons */
 }
 
 .l1 li {
-    /* float: left; Removed */
-    margin: 0 5px; /* Spacing between nav items */
+    margin: 0 5px;
+    height: var(--navbar-height); /* Add fixed height */
+    display: flex; /* Add flex display */
+    align-items: center; /* Center items vertically */
 }
 
 li button,
 .dropbtn1 {
     border: none;
     padding: 0px 15px; /* Vertical padding is handled by line-height/height of parent */
-    display: inline-block;
+    display: flex; /* Change from inline-block to flex */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
     color: var(--nav-link-color);
     text-align: center;
     font-size: 16px; /* Adjusted font size */
     text-decoration: none;
     cursor: pointer;
     background-color: transparent; /* Buttons should be transparent on navbar */
-    height: var(--navbar-height); /* Make button clickable area full height */
-    line-height: var(--navbar-height); /* Vertically center text */
+    height: 100%; /* Take full height of parent */
+    line-height: normal; /* Reset line-height */
+    padding: 0 15px; /* Keep horizontal padding */
     transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
     border-bottom: 3px solid transparent; /* For active/hover effect */
 }
