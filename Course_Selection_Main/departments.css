@@ -35,8 +35,8 @@
 /* Grid for content cards/items */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 60px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
     align-items: stretch;
     margin: 0; /* Reset any default margins */
     width: 100%; 
@@ -48,11 +48,11 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     padding: 20px;
     display: flex;
-    flex-direction: column; 
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    height: 100%; 
-    width: 100%; 
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
     box-sizing: border-box;
+    position: relative;
 }
 
 .info-card:hover {
@@ -123,6 +123,7 @@
     color: #777777;
     padding-top: 10px;
     border-top: 1px solid #eee;
+    margin-top: auto;
 }
 
 /* Title card goes first on content card */
@@ -302,4 +303,10 @@
 
 .content-section nav .details-button:active {
     transform: translateY(0);
+}
+
+/* Make cards in same row share height */
+.card-grid::after {
+    content: '';
+    flex: auto;
 }
