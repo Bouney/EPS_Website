@@ -4,7 +4,7 @@
     --navbar-background: #3A2E39; /* Example, adjust if needed */
     --text-color: #333333;
     --card-background: #FFFFFF;
-    --page-background: #F0F2F5;
+    --page-background: ;
 }
 
 /* General page container for content */
@@ -12,14 +12,14 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    overflow: hidden; /* Added to contain grid overflow */
+    overflow: hidden; 
 }
 
 .page-title {
     font-size: 2.5em;
     font-weight: bold;
     color: var(--text-color);
-    margin-bottom: 40px;  /* Increased space below the title */
+    margin-bottom: 40px;  
     text-align: left;
 }
 
@@ -27,7 +27,7 @@
     font-size: 1.8em;
     font-weight: bold;
     color: var(--text-color);
-    margin-top: 0;
+    margin-top: 30;
     margin-bottom: 30px;
     text-align: left;
 }
@@ -39,7 +39,7 @@
     gap: 60px;
     align-items: stretch;
     margin: 0; /* Reset any default margins */
-    width: 100%; /* Ensure grid takes full width of container */
+    width: 100%; 
 }
 
 .info-card {
@@ -48,11 +48,11 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     padding: 20px;
     display: flex;
-    flex-direction: column; /* Stacks card content vertically */
+    flex-direction: column; 
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    height: 100%; /* Add this to ensure full height */
-    width: 100%; /* Ensure card takes full width of grid cell */
-    box-sizing: border-box; /* Include padding in width calculation */
+    height: 100%; 
+    width: 100%; 
+    box-sizing: border-box;
 }
 
 .info-card:hover {
@@ -93,7 +93,7 @@
 
 .tag.type-tag-elective { background-color: #dc3545; }
 .tag.type-tag-required { background-color: #6f42c1; }
-.tag.credits-tag { background-color: #17a2b8; } /* Example for a credits tag */
+.tag.credits-tag { background-color: #17a2b8; } 
 .tag.info-tag { background-color: #6c757d; } /* Generic info tag */
 
 
@@ -102,28 +102,35 @@
     line-height: 1.6;
     color: #555555;
     margin-bottom: 15px;
-    /* flex-grow: 1; Removed/Commented - allow natural height */
 }
 
 /* Styling for lists within description for better readability */
 .info-card .description ul,
 .info-card .description ol {
-    padding-left: 20px; /* Indent list items */
-    margin-top: 5px; /* Space above the list if it follows text */
-    margin-bottom: 10px; /* Space below the list */
+    padding-left: 20px; 
+    margin-top: 5px; 
+    margin-bottom: 10px; 
 }
 
 .info-card .description li {
-    margin-bottom: 5px; /* Space between list items */
+    margin-bottom: 5px; 
 }
 
 
+/* Course code goes bottom on content card */
 .info-card .item-identifier { /* For course codes, etc. */
     font-size: 0.8em;
     color: #777777;
-    margin-top: auto; /* Pushes to the bottom if card is flex column */
     padding-top: 10px;
     border-top: 1px solid #eee;
+}
+
+/* Title card goes first on content card */
+.info-card h3 {
+}
+
+/* Grade and requirement level tags next */
+.info-card .tags {
 }
 
 .info-card .action-link,
@@ -156,14 +163,15 @@
     margin-bottom: 20px;
 }
 
-/* Responsive iframe wrapper */
+/*For embedded youtube videos*/
 .responsive-iframe-container {
     position: relative;
     overflow: hidden;
     width: 100%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    max-width: 560px; /* Max width for the video itself */
-    margin-left: auto; /* Center within its flex item space if max-width is hit */
+    /* Maxwidth should not be needed */
+    /* max-width: 1200px; 
+    margin-left: auto;  */
     margin-right: auto;
     margin-bottom: 20px;
 }

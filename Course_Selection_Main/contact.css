@@ -1,3 +1,12 @@
+/*
+Colours
+Background 1: #F0F2F5
+Background 2: lavender 
+Table accent: #dee6ec
+
+*/
+
+
 body,
 html {
     height: 85%;
@@ -14,7 +23,7 @@ html {
 }
 
 #sectionerWhite {
-    background-color: rgb(255, 255, 255);
+    background-color: #F0F2F5;
     padding: 40px 20px;
 }
 
@@ -35,7 +44,7 @@ html {
 }
 
 #schoolContact {
-    background-color: #f8f9fa;
+    background-color: #dee6ec;
     padding: 20px;
     border-radius: 8px;
     max-width: 600px;
@@ -87,8 +96,8 @@ html {
     vertical-align: top;
 }
 
-#counsellorsTable tr:nth-child(even) {
-    background-color: #f8f9fa;
+#counsellorsTable tr:nth-child(even) { /*counsellor table bg 2*/
+    background-color: #dee6ec;
 }
 
 #counsellorsTable tr:hover {

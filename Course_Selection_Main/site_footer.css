@@ -3,7 +3,7 @@
     color: var(--nav-link-color);
     text-align: center;
     padding: 20px 15px;
-    margin-top: 40px;
+    margin-top: 0px;
     font-size: 0.9em;
     font-family: var(--font-family);
 }
