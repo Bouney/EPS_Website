@@ -33,7 +33,7 @@ html {
 
 /* button section */
 
-.b1s {
+.b1s { /*button for pdf instruction download*/
     background-color: #4a6fa5;
     font-size: 26px;
     border-color: white;
@@ -269,7 +269,7 @@ html {
 }
 
 #sectionerWhite {
-    background-color: rgb(255, 255, 255);
+    background-color: #F0F2F5;
 }
 
 #sectionerAlt {

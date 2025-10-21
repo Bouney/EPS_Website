@@ -1,10 +1,13 @@
-/* departments.css - Generalized styles for main page content */
+/*CSS file for all of the courses page
+
+Colours:
+Background: #F0F2F5
+*/
 
 :root { /* Ensure these variables are defined if not already in top_content.css or globally */
     --navbar-background: #3A2E39; /* Example, adjust if needed */
     --text-color: #333333;
     --card-background: #FFFFFF;
-    --page-background: ;
 }
 
 /* General page container for content */
