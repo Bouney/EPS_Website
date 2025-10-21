@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <button class="dropbtn1">Departments</button>
                     <div class="dropdown-content">
                         <a class="dropbtn2" data-page="business.html" href="business.html">Business Education</a>
+                        <a class="dropbtn2" data-page="computers.html" href="computers.html">Computer Education</a>
                         <a class="dropbtn2" data-page="careers.html" href="careers.html">Career Education</a>
                         <a class="dropbtn2" data-page="ell.html" href="ell.html">English Language Learning</a>
                         <a class="dropbtn2" data-page="fine_arts.html" href="fine_arts.html">Fine Arts</a>
