@@ -58,7 +58,7 @@ html {
     padding-bottom: 8px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
-    color: purple;
+    color: #5a217e;
     font-weight: 600;
     margin-left: 10px;
 }
@@ -135,7 +135,7 @@ html {
 #videoTitle {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    color: purple;
+    color: #5a217e;
     font-weight: 600;
     background-color: lavender;
 }
@@ -143,7 +143,7 @@ html {
 #reqTitle {
     margin: 0 15px;
     font-family: Arial, Helvetica, sans-serif;
-    color: purple;
+    color: #5a217e;
     font-weight: 700;
     font-size: 18px;
 }
@@ -176,33 +176,57 @@ html {
 
 
 #boxReq {
-    border-style: solid;
-    margin: 2.5% 2%;
-    width: 18.5%;
-    padding: 1%;
-    color:#333;
-    height: 20%;
-    background-color:#e6e6fa;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 150%;
-    font-size: 14px;
-}
-
-#boxContainer {
-    margin: auto;
+    background-color: #e6e6fa; 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
+    flex-direction: column;
+    height: 100%;
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
+    position: relative;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    font-size: 14px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+#boxReq:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+#boxReq #boldTitle {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #5a217e;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 #boldTitle {
     font-weight: 900;
-    color: purple;
+    color: #5a217e;
 }
+
+#boxContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+    margin: auto;
+    /* display: flex; */
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+
 
 body,
 html {
@@ -273,7 +297,7 @@ html {
 }
 
 #sectionerAlt {
-    background-color: lavender;
+    background-color: rgb(219, 219, 241)
 }
 
 #processInfo {
@@ -288,7 +312,7 @@ html {
 hr {
     border: 0;
     height: 2px;
-    background-color: #6b2796;
+    background-color: #5a217e;
     margin: 10px 0;
 }
 
