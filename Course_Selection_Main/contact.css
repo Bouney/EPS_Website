@@ -1,3 +1,12 @@
+/*
+Colours
+Background 1: #F0F2F5
+Background 2: lavender 
+Table accent: #dee6ec
+
+*/
+
+
 body,
 html {
     height: 85%;
@@ -14,7 +23,7 @@ html {
 }
 
 #sectionerWhite {
-    background-color: rgb(255, 255, 255);
+    background-color: #F0F2F5;
     padding: 40px 20px;
 }
 
@@ -35,7 +44,7 @@ html {
 }
 
 #schoolContact {
-    background-color: #f8f9fa;
+    background-color: #dee6ec;
     padding: 20px;
     border-radius: 8px;
     max-width: 600px;
@@ -75,7 +84,7 @@ html {
 
 #counsellorsTable th {
     font-size: 1.3em;
-    background-color: #5e3356;
+    background-color: #6b2796;
     color: white;
     padding: 12px;
     text-align: middle;
@@ -87,8 +96,8 @@ html {
     vertical-align: top;
 }
 
-#counsellorsTable tr:nth-child(even) {
-    background-color: #f8f9fa;
+#counsellorsTable tr:nth-child(even) { /*counsellor table bg 2*/
+    background-color: #dee6ec;
 }
 
 #counsellorsTable tr:hover {
@@ -135,18 +144,6 @@ html {
     margin-top: 1%;
 }
 
-
-#main {
-    margin-top: inherit;
-    padding-top: 0.5%;
-    /* padding-bottom: 0.5%; */
-    /* height: auto;
-    background-image: url('bg.jpg');
-    background-repeat: repeat;
-    filter: grayscale(20%);
-    background-attachment: fixed; */
-}
-
 #p1 {
     color: black;
     padding-top: 2%;
@@ -163,17 +160,6 @@ html {
     margin-right: 2%;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-}
-
-#textSpace {
-    top: 0px;
-    height: auto;
-    width: inherit;
-    margin-right: 12%;
-    margin-left: 12%;
-    background-color: white;
-    overflow: clip;
-    border-radius: 15px;
 }
 
 #credits {
@@ -287,6 +273,6 @@ table {
 hr {
     border: 0;
     height: 2px;
-    background-color: purple;
+    background-color: #6b2796;
     margin: 10px 0;
 }

@@ -1,0 +1,32 @@
+.site-footer {
+    background-image: linear-gradient(to bottom right, #5a217e, #431f58);
+    color: var(--nav-link-color);
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: 0px;
+    font-size: 0.9em;
+    font-family: var(--font-family);
+}
+
+.site-footer h4,
+.site-footer .footer-address,
+.site-footer a {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.site-footer a {
+    color: var(--nav-link-active-underline);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-credit {
+    font-size: 0.75em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 20px;
+    font-style: italic;
+}
