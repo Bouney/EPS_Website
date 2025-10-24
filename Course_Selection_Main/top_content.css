@@ -1,12 +1,12 @@
 :root {
-    --navbar-height: 70px; /* Adjusted height */
-    --header-img-height: 50px; /* Adjusted for new navbar height */
-    --header-img-width: 95px; /* Scaled proportionally */
-    --navbar-background: #8830a3; /* Dark purple from image inspiration */
+    --navbar-height: 70px; 
+    --header-img-height: 50px;
+    --header-img-width: 95px; 
+    --navbar-background: #8830a3;
     --nav-link-color: #FFFFFF;
     --nav-link-hover-color: #e6e6ee;
     --nav-dropdown-content-hover-color: #000000;
-    --nav-link-active-underline: #FFD700; /* Gold/Yellow for active link */
+    --nav-link-active-underline: #FFD700; 
     --text-color: #333333;
     --card-background: #FFFFFF;
     --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

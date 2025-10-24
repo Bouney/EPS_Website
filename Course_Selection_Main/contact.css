@@ -3,6 +3,8 @@ Colours
 Background 1: #F0F2F5
 Background 2: lavender 
 Table accent: #dee6ec
+Credit section accent: #6a5acd
+Contact section school colour: #5e3356
 
 */
 
@@ -113,55 +115,6 @@ html {
     text-decoration: underline;
 }
 
-.p1 {
-    font-size: 50px;
-}
-
-.p2 {
-    font-size: 30px;
-}
-
-
-#img2 {
-    padding-top: 12px;
-    padding-left: 12px;
-    height: 65px;
-    width: 135px;
-    position: relative;
-    float: left;
-    margin-left: 3%;
-    margin-top: 1%;
-}
-
-#img3 {
-    padding-top: 12px;
-    padding-left: 12px;
-    height: 65px;
-    width: 135px;
-    position: relative;
-    float: right;
-    margin-right: 3%;
-    margin-top: 1%;
-}
-
-#p1 {
-    color: black;
-    padding-top: 2%;
-    font-size: 50px;
-    text-align: center;
-    font-weight: bold;
-    padding-bottom: 2%;
-}
-
-#p2 {
-    color: black;
-    font-size: 20px;
-    margin-left: 2%;
-    margin-right: 2%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-
 #credits {
     text-align: center;
     padding: 0 20px;
@@ -270,7 +223,7 @@ table {
     margin-left: 10%;
 }
 
-hr {
+hr { 
     border: 0;
     height: 2px;
     background-color: #6b2796;
