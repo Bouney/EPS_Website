@@ -4,11 +4,10 @@ html {
     height: 85%;
     margin: 0;
     font-family: "Open Sans";
-}
+} /* tragedy picking open sans */
 
 
 /* land acknowledgement section */
-
 #soze {
     height: 25%;
     display: flex;
@@ -124,14 +123,17 @@ html {
     border-radius: 10px;
 }
 
+/* pdf instruction style */
 #deadline9 {
     background-color: #4a6fa5;
 }
 
+/* course selection deadline style */
 #deadline12 {
-    background-color: green;
+    background-color: rgb(0, 107, 115);
 }
 
+/* video title style */
 #videoTitle {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
@@ -140,6 +142,7 @@ html {
     background-color: lavender;
 }
 
+/* Big purple title */
 #reqTitle {
     margin: 0 15px;
     font-family: Arial, Helvetica, sans-serif;
@@ -158,14 +161,7 @@ html {
 }
 
 
-/* Line separators */
-
-#line {
-    margin-top: 140px;
-    margin-top: 125px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
+/* Line separator */
 
 #line2 {
     margin-top: 10px;
@@ -174,7 +170,7 @@ html {
     margin-right: 10px;
 }
 
-
+/* Course requirements section */
 #boxReq {
     background-color: #e6e6fa; 
     border-radius: 8px;
@@ -216,8 +212,6 @@ html {
     grid-template-columns: repeat(4, 1fr);
     align-items: stretch;
     margin: auto;
-    /* display: flex; */
-    /* justify-content: center; */
     flex-wrap: wrap;
     max-width: 1200px;
     width: 100%;
@@ -237,7 +231,7 @@ html {
 }
 
 
-/* Landing Image Styles */
+/* Landing Image */
 
 .landing-image {
     position: relative;
@@ -261,12 +255,10 @@ html {
     position: absolute;
     bottom: 5%;
     left: 2%;
-    /* Moved further left */
     text-align: left;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     width: 60%;
-    /* Increased width to compensate for left shift */
 }
 
 .landing-text h1 {
@@ -284,6 +276,7 @@ html {
     padding-right: 2rem;
 }
 
+/* Different coloured page sections */
 #sectionerWhite,
 #sectionerAlt {
     min-height: 100vh;
@@ -300,6 +293,7 @@ html {
     background-color: rgb(219, 219, 241)
 }
 
+/* Misc */
 #processInfo {
     font-size: 18px;
     margin-top: 20px;
