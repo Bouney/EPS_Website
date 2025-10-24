@@ -5,7 +5,7 @@ Background: #F0F2F5
 */
 
 :root { /* Ensure these variables are defined if not already in top_content.css or globally */
-    --navbar-background: #3A2E39; /* Example, adjust if needed */
+    --navbar-background: #3A2E39; 
     --text-color: #333333;
     --card-background: #FFFFFF;
 }
@@ -35,16 +35,16 @@ Background: #F0F2F5
     text-align: left;
 }
 
-/* Grid for content cards/items */
+/* Grid container for content cards/items */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     align-items: stretch;
-    margin: 0; /* Reset any default margins */
     width: 100%; 
 }
 
+/* Each card describing a course */
 .info-card {
     background-color: var(--card-background);
     border-radius: 8px;
@@ -87,7 +87,7 @@ Background: #F0F2F5
     line-height: 1;
 }
 
-/* Specific tag colors */
+/* Course information tag colors */
 .tag.grade-tag-8 { background-color: #A6E1FA; color: #333; }
 .tag.grade-tag-9 { background-color: #007bff; }
 .tag.grade-tag-10 { background-color: #28a745; }
@@ -196,18 +196,18 @@ Background: #F0F2F5
 .info-card img,
 .media-pair-container img,
 .content-section img { /* General image styling within these contexts */
-    max-width: 100%; /* Make images responsive by default */
+    max-width: 100%; 
     height: auto;
     border-radius: 4px;
     border: 1px solid #ddd; /* Optional subtle border */
     display: block; /* Removes extra space below image if it's inline */
-    margin-top: 10px; /* Default top margin */
-    margin-bottom: 10px; /* Default bottom margin */
+    margin-top: 10px; 
+    margin-bottom: 10px; 
 }
 
 .media-pair-container img {
     max-width: 400px; /* Specific max-width if paired, adjust as needed */
-    width: 100%; /* Ensures it shrinks within flex constraints */
+    width: 100%; 
 }
 
 
