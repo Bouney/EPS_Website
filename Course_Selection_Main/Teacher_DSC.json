@@ -3,5 +3,10 @@
         "thumbnail" : "kid.png",
         "title" : "test",
         "description" : "test"
+    },
+    {
+        "thumbnail" : "kid.png",
+        "title" : "test",
+        "description" : "test"
     } 
 ]
