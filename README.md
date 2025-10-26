@@ -28,7 +28,7 @@ This project is made possible thanks to the hard work and dedication of the foll
 
 *Richard Fang*
 
-*Oliver Kihoi Guo*
+*Oliver Ki Hoi Guo*
 
 *Andrew Schutte*
 
