@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Add navbar HTML
-    // Note: ElginParkOrcaImage is wrapped in an <a> tag pointing to home.html
+    // Note: ElginParkOrcaImage is wrapped in an <a> tag pointing to index.html
     document.body.insertAdjacentHTML("afterbegin", `
         <ul class="l1">
-            <a href="home.html"><img src="./elgin_logo.png" id="ElginParkOrcaImage" alt="Elgin Park Orca Logo"></a>
+            <a href="index.html"><img src="./elgin_logo.png" id="ElginParkOrcaImage" alt="Elgin Park Orca Logo"></a>
             <div class="NavItem">
-                <li><button data-page="home.html" onclick="location.href='home.html'">Home</button></li>
+                <li><button data-page="index.html" onclick="location.href='index.html'">Home</button></li>
                 <li><button data-page="cal.html" onclick="location.href='cal.html'">Calendar</button></li>
                 <li class="dropdown">
                     <button class="dropbtn1">Departments</button>
