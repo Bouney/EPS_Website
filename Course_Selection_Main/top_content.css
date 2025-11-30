@@ -49,6 +49,27 @@ body {
     transform: translateY(-100%);
 }
 
+.nav-toggle {
+    display: none;
+    margin-left: auto;
+    margin-right: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.nav-toggle svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--nav-link-color);
+    transition: transform 0.2s ease;
+}
+
+.l1.nav-open .nav-toggle svg {
+    transform: rotate(90deg);
+}
+
 /* Logo specific container if needed, or direct style on <a> */
 .l1 > a { /* Logo link */
     display: flex; /* For aligning image if text was next to it */
@@ -171,4 +192,87 @@ li.dropdown {
 .dropdown-content a:hover {
     background-color: #e9e9e9;
     color: var(--navbar-background);
+}
+
+@media (max-width: 900px) {
+    :root {
+        --navbar-height: 60px;
+    }
+
+    .l1 {
+        padding: 0 16px;
+    }
+
+    .NavItem {
+        position: fixed;
+        top: var(--navbar-height);
+        left: 0;
+        right: 0;
+        z-index: 999;
+        height: auto;
+        background-image: linear-gradient(to bottom right, #562774, #431f58);
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 10px 0;
+        max-height: calc(100vh - var(--navbar-height));
+        overflow-y: auto;
+        display: none;
+        pointer-events: auto;
+        gap: 0;
+    }
+
+    .l1.nav-open .NavItem {
+        display: flex;
+    }
+
+    .NavItem > li {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    li button,
+    .dropbtn1 {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1002;
+    }
+
+    .l1 > a {
+        z-index: 1002;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+        background-color: #f4f2f7;
+        box-shadow: none;
+        padding: 0;
+        grid-template-columns: 1fr;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        color: var(--text-color);
+    }
 }
