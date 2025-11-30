@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <a href="index.html"><img src="./elgin_logo.png" id="ElginParkOrcaImage" alt="Elgin Park Orca Logo"></a>
             <div class="NavItem">
                 <li><button data-page="index.html" onclick="location.href='index.html'">Home</button></li>
-                <li><button data-page="cal.html" onclick="location.href='cal.html'">Calendar</button></li>
+                <li><button data-page="cal.html" onclick="location.href='calendar.html'">Calendar</button></li>
                 <li class="dropdown">
                     <button class="dropbtn1">Departments</button>
                     <div class="dropdown-content">
