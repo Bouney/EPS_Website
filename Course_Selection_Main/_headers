@@ -1,0 +1,4 @@
+# Disable caching for all pages (was requested)
+/*
+    # This header is more efficient than no-store
+    Cache-Control: no-cache
