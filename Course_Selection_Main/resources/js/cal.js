@@ -7,7 +7,10 @@ window.addEventListener("load", function () {
     headerToolbar: {
       left: "prev,next today",
       center: "title",
-      right: "dayGridMonth,timeGridWeek,timeGridDay",
+      right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
+    },
+    buttonText: {
+      list: "agenda" // Mirroring ON terminology
     },
     events: async function (fetchInfo, successCallback, failureCallback) {
       try {
@@ -23,6 +26,8 @@ window.addEventListener("load", function () {
             start:
               event.date + (event.start24 ? "T" + event.start24 : ""),
             end: event.end ? event.date + "T" + event.end : null,
+            color: event.cal_mode ? "#593751" : "#6e3c8d",
+            borderColor: event.cal_mode ? "#40263b" : "#6e3c8d",
             extendedProps: {
               cal_mode: event.cal_mode, // For eventClassNames
             },

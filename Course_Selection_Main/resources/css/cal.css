@@ -25,10 +25,10 @@
     }
 }
 
-:root {
+/* :root {
     --fc-event-bg-color: #6e3c8d;
     --fc-event-border-color: #6e3c8d;
-}
+} */
 .fc-daygrid-event .fc-event-title {
     overflow-x: auto; /*Scrollable as to not truncate text*/
     white-space: nowrap;
@@ -43,8 +43,5 @@ h1 {
 }
 
 .block-order {
-  background-color: #40263b;
-  border-color: #593751;
-  color: white;
   text-align: center;
 }
