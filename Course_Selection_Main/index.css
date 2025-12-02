@@ -46,9 +46,19 @@ html {
     cursor: pointer;
 }
 
-#CountdownDateGr12 {
-    font-size: 40px;
-    font-weight: bold;
+#selection-deadline-time {
+    span {
+        display: block;
+    }
+
+    #CountdownDateGr12 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    #deadline-date {
+        font-size: 18px;
+    }
 }
 
 #processTitle {

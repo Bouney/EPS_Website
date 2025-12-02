@@ -15,9 +15,8 @@ function OnScrollAction() {
 window.addEventListener("scroll", () => OnScrollAction());
 
 // Countdown Timer
-const courseSelectionDate = new Date(COURSE_SELECTION_SEMESTER_2).getTime();
+// Date is handled by the <time> element in index.html
+const courseSelectionDate = new Date(document.getElementById("selection-deadline-time").dateTime).getTime();
 const countdownElem = document.getElementById("CountdownDateGr12");
 
 Countdown(courseSelectionDate, countdownElem);
-
-// change the end date of the countdown to March 10 4:00 PM
