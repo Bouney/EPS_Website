@@ -4,7 +4,7 @@
 
 **https://www.elginparksecondary.com**
 
-Preview a branch: <branch>.eps-website.pages.dev
+Preview a branch: [branch].eps-website.pages.dev
 
 ***
 
