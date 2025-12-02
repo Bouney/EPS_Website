@@ -15,7 +15,7 @@ html {
     margin: auto;
 }
 
-#pp1 {
+.land-ack-seal {
     height: 80%;
     margin: auto;
 }
@@ -62,8 +62,8 @@ html {
     }
 }
 
-#processTitle {
-    float: left;
+h2 {
+    /* float: left; */
     padding-top: 15px;
     padding-bottom: 8px;
     font-family: Arial, Helvetica, sans-serif;
@@ -71,6 +71,8 @@ html {
     color: #5a217e;
     font-weight: 600;
     margin-left: 10px;
+    margin-bottom: .2em;
+    text-transform: uppercase;
 }
 
 #container1 {
@@ -98,6 +100,10 @@ html {
     height: 60vh;
     /* box-shadow: 2px 2px 4px; */
     border-radius: 10px;
+}
+
+#video-figure {
+    margin-top: 0;
 }
 
 .crsReqHd {
@@ -151,18 +157,21 @@ html {
     color: #5a217e;
     font-weight: 600;
     background-color: lavender;
+    padding: .4em;
 }
 
 /* Big purple title */
-#reqTitle {
-    margin: 0 15px;
+/* .reqTitle { */
+h3 {
+    margin: 1em 15px 0;
     font-family: Arial, Helvetica, sans-serif;
     color: #5a217e;
     font-weight: 700;
     font-size: 18px;
+    text-transform: uppercase;
 }
 
-#reqContent {
+.reqContent {
     margin:0 15px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -174,7 +183,7 @@ html {
 
 /* Line separator */
 
-#line2 {
+hr.line2 {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
@@ -182,7 +191,7 @@ html {
 }
 
 /* Course requirements section */
-#boxReq {
+.boxReq {
     background-color: #e6e6fa; 
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -200,22 +209,17 @@ html {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-#boxReq:hover {
+.boxReq:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-#boxReq #boldTitle {
-    font-size: 1.4em;
+.boxReq .grade-title {
+    font-size: 1.3em;
     font-weight: bold;
     color: #5a217e;
     margin-top: 0;
     margin-bottom: 15px;
-}
-
-#boldTitle {
-    font-weight: 900;
-    color: #5a217e;
 }
 
 #boxContainer {

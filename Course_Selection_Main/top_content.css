@@ -59,7 +59,7 @@ iframe.youtube-embed {
 }
 
 /* Logo specific container if needed, or direct style on <a> */
-.l1 > a:has(img#ElginParkOrcaImage) { /* Logo link */
+a:has(img#ElginParkOrcaImage) { /* Logo link */
     display: flex; /* For aligning image if text was next to it */
     align-items: center;
     height: 100%;
