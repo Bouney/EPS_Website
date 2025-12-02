@@ -120,7 +120,7 @@ body {
 }
 
 
-.active-link {
+.l1 li .active-link {
     border-bottom-color: var(--nav-link-active-underline);
     font-weight: bold;
 }
