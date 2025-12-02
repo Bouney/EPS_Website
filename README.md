@@ -2,9 +2,9 @@
 
 ![1.00](https://elginparksecondary.com/elgin_logo.png)
 
-**Preview: https://main.eps-website-elssgin-twonfi.pages.dev/home**
+**https://www.elginparksecondary.com**
 
-Needs to be manually synced until this repo is transferred to the @elginpark organization and twonfi can set up Cloudflare Pages.
+Preview a branch: [branch].eps-website.pages.dev
 
 ***
 
