@@ -18,24 +18,6 @@ The **EPS Website** is the digital platform for Elgin Park School, designed to p
 
 ***
 
-## 🆕 Changes
-
-### 🔹 **Gui Changes**
-
-* Go into detail
-
-### 🔹 **Club List**
-
-* Go into detail
-
-***
-
-## 🔧 Technologies Used
-
-* List technologies used
-
-***
-
 ## 💡 Contributors
 
 This project is made possible thanks to the hard work and dedication of the following members of the **EPS Computer Club**:
@@ -46,7 +28,7 @@ This project is made possible thanks to the hard work and dedication of the foll
 
 *Richard Fang*
 
-*Oliver Kihoi Guo*
+*Oliver Ki Hoi Guo*
 
 *Andrew Schutte*
 
