@@ -45,6 +45,10 @@ html {
     margin-top: 50px;
 }
 
+address {
+    font-style: normal;
+}
+
 #schoolContact {
     background-color: #dee6ec;
     padding: 20px;
@@ -122,27 +126,23 @@ html {
     line-height: 1.6;
 }
 
-#credits h3 {
-    font-size: 1.2em;
-    margin-bottom: 1.5em;
-    color: #333;
-}
 #credits h2 {
     font-size: 1.4em;
     margin-bottom: 1.5em;
     color: #333;
 }
 
-#credits center img {
+#credits img {
     border: 1px solid #ddd;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin: 20px 0;
+    margin: 20px auto;
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
-#lit {
+.lit {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
@@ -151,7 +151,7 @@ html {
     margin: 30px 0;
 }
 
-#lit li {
+.lit li {
     padding: 3px 3px 3px 15px;
     text-align: left;
     border-left: 1px solid #6a5acd;

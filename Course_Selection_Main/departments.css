@@ -99,23 +99,23 @@ Background: #F0F2F5
 .tag.credits-tag { background-color: #17a2b8; } 
 .tag.info-tag { background-color: #6c757d; } /* Generic info tag */
 
-
-.info-card .description {
+/* Description paragraph */
+.info-card p:not(.item-identifier), .description {
     font-size: 0.95em;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #555555;
-    margin-bottom: 15px;
+    margin: .35em 0;
 }
 
 /* Styling for lists within description for better readability */
-.info-card .description ul,
-.info-card .description ol {
+.info-card ul,
+.info-card ol {
     padding-left: 20px; 
     margin-top: 5px; 
     margin-bottom: 10px; 
 }
 
-.info-card .description li {
+.info-card li {
     margin-bottom: 5px; 
 }
 
@@ -123,18 +123,10 @@ Background: #F0F2F5
 /* Course code goes bottom on content card */
 .info-card .item-identifier { /* For course codes, etc. */
     font-size: 0.8em;
-    color: #777777;
+    color: #737373;
     padding-top: 10px;
     border-top: 1px solid #eee;
     margin-top: auto;
-}
-
-/* Title card goes first on content card */
-.info-card h3 {
-}
-
-/* Grade and requirement level tags next */
-.info-card .tags {
 }
 
 .info-card .action-link,

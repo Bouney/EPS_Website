@@ -30,6 +30,10 @@ summary {
     font-weight: bold;
 }
 
+iframe.youtube-embed {
+    border: none;
+}
+
 /* Navigation Bar */
 .l1 {
     list-style-type: none;
