@@ -8,7 +8,7 @@ const BANNER = document.getElementById("BANNER");
 
 // Function for changing class on scroll
 function OnScrollAction() {
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
     navbarExport(BANNER, Navbar);
 }
 

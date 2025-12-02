@@ -20,6 +20,7 @@ export default function Countdown(time, element) {
         if (distance < 0) {
             clearInterval(x);
             element.innerHTML = "Deadline Reached";
+            return;
         }
     }, 1000);
 }
