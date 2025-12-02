@@ -25,6 +25,16 @@ body {
     padding-top: var(--navbar-height); /* Account for fixed navbar */
 }
 
+a:link {
+    color: #2548B1;
+  }
+a:visited {
+  color: #662D91;
+}
+a:active {
+  color: #0F2050;
+}
+
 summary {
     cursor: pointer;
     font-weight: bold;
