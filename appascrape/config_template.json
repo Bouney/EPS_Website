@@ -1,9 +1,0 @@
-{
-  "_info":
-  "=== Fill this out with your information, then remove everything with key containing '_info'. ===",
-
-  "app": "example",                  "_info_app": "Your subdomain (e.g. https://example.appazur.com => example)",
-  "file_path": "updates",            "_info_file_path": "Where to save the files (prepended with current working directory)",
-  "save": {"messages": ["html"], "calendar": ["json"]},  "_info_save_formats": "Saved formats (html, json)",
-  "footer": "",                      "_info_footer": "Code to add to the bottom of the page",
-  "pwa": true,                       "_info_pwa": "Make this a progressive web app that can be installed"
