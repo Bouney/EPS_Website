@@ -1,34 +1,47 @@
 window.addEventListener("load", function () {
   var calendarEl = document.getElementById("calendar");
   var calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: "dayGridMonth", 
-      showNonCurrentDates: false, //depends if you wanna show other dates, too visually messy
-      fixedWeekCount: false,
-      headerToolbar: {left: "prev,next today",
-          center: "title",
-          right: "dayGridMonth,timeGridWeek,timeGridDay",
-        },
-        events: async function (fetchInfo, successCallback, failureCallback) {
-          try {
-            const response = await fetch(
-              "/orca-news/data?api=a"
-            );
-            const data = await response.json();
+    initialView: "dayGridMonth", 
+    showNonCurrentDates: false, //depends if you wanna show other dates, too visually messy
+    fixedWeekCount: false,
+    headerToolbar: {
+      left: "prev,next today",
+      center: "title",
+      right: "dayGridMonth,timeGridWeek,timeGridDay",
+    },
+    events: async function (fetchInfo, successCallback, failureCallback) {
+      try {
+        const response = await fetch(
+          "/orca-news/data?api=a"
+        );
+        const data = await response.json();
 
-            const events = data.map((event) => {
-              return {
-                title: event.name,
-                start:
-                  event.date + (event.start24 ? "T" + event.start24 : ""),
-                end: event.end ? event.date + "T" + event.end : null,
-              };
-            });
+        const events = data.map((event) => {
+          return {
+            id: event.sid, // ON uses sid as unique event ID; schedule_id appears to be a calendar ID
+            title: event.name,
+            start:
+              event.date + (event.start24 ? "T" + event.start24 : ""),
+            end: event.end ? event.date + "T" + event.end : null,
+            extendedProps: {
+              cal_mode: event.cal_mode, // For eventClassNames
+            },
+          };
+        });
 
-            successCallback(events);
-          } catch (error) {
-            console.error("Error fetching events:", error);
-            failureCallback(error);
-          }},
+        successCallback(events);
+      } catch (error) {
+        console.error("Error fetching events:", error);
+        failureCallback(error);
+      }
+    },
+    eventClassNames: function(arg) {
+      // Block order highlighting
+      // (ON uses cal_mode to highlight "block order" days)
+      if (arg.event.extendedProps.cal_mode) {
+        return [ 'block-order' ]
+      }
+    },
   });
   calendar.render();
 });

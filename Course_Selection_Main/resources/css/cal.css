@@ -41,3 +41,10 @@ h1 {
     text-align: center;
     margin: 1.3em 0;
 }
+
+.block-order {
+  background-color: #40263b;
+  border-color: #593751;
+  color: white;
+  text-align: center;
+}
