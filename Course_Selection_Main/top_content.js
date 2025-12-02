@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", function() {
         <ul class="l1">
             <a href="/"><img src="./elgin_logo.png" id="ElginParkOrcaImage" alt="Elgin Park Orca Logo"></a>
             <div class="NavItem">
-                <li><button data-page="/" onclick="location.href='/'">Home</button></li>
-                <li><button data-page="cal" onclick="location.href='cal'">Calendar</button></li>
+                <li><a data-page="" href="/" class="top-level">Home</a></li><!-- data-page is empty string for home -->
+                <li><a data-page="cal" href="cal" class="top-level">Calendar</a></li>
                 <li class="dropdown">
-                    <button class="dropbtn1">Departments</button>
+                    <button class="dropbtn1 top-level">Departments</button>
                     <div class="dropdown-content">
                         <a class="dropbtn2" data-page="business" href="business">Business Education</a>
                         <a class="dropbtn2" data-page="computers" href="computers">Computer Education</a>
@@ -26,15 +26,15 @@ document.addEventListener("DOMContentLoaded", function() {
                     </div>
                 </li>
                 <li class="dropdown">
-                    <button class="dropbtn1">Specialized Programs</button>
+                    <button class="dropbtn1 top-level">Specialized Programs</button>
                     <div class="dropdown-content">
                         <a class="dropbtn2" data-page="advanced_placement" href="advanced_placement">Advanced Placement</a>
                         <a class="dropbtn2" data-page="leadership" href="leadership">Leadership</a>
                     </div>
                 </li>
-                <li><button data-page="forms" onclick="location.href='forms'">Forms</button></li>
-                <li><button data-page="HybridLearning" onclick="location.href='HybridLearning'">Hybrid Learning</button></li>
-                <li><button data-page="contact" onclick="location.href='contact'">Contact</button></li>
+                <li><a data-page="forms" href="forms" class="top-level">Forms</a></li>
+                <li><a data-page="HybridLearning" href="HybridLearning" class="top-level">Hybrid Learning</a></li>
+                <li><a data-page="contact" href="contact" class="top-level">Contact</a></li>
             </div>
         </ul>
     `);

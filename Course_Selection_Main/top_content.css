@@ -50,7 +50,7 @@ body {
 }
 
 /* Logo specific container if needed, or direct style on <a> */
-.l1 > a { /* Logo link */
+.l1 > a:has(img#ElginParkOrcaImage) { /* Logo link */
     display: flex; /* For aligning image if text was next to it */
     align-items: center;
     height: 100%;
@@ -90,8 +90,7 @@ body {
     align-items: center; /* Center items vertically */
 }
 
-li button,
-.dropbtn1 {
+.NavItem .top-level {
     border: none;
     padding: 0px 15px; /* Vertical padding is handled by line-height/height of parent */
     display: flex; /* Change from inline-block to flex */
@@ -110,8 +109,7 @@ li button,
     border-bottom: 3px solid transparent; /* For active/hover effect */
 }
 
-.NavItem button:hover,
-.dropbtn1:hover{ /* If using <a> tags directly for nav links */
+.NavItem .top-level:hover {
     color: var(--nav-link-hover-color);
     border-bottom-color: var(--nav-link-hover-color);
 }
