@@ -8,8 +8,15 @@
     <link rel="stylesheet" href="top_content.css">
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
-    <!-- <link rel="icon" type="image/x-icon" href="elgin_logo.png"> -->
     <title>Elgin Park Secondary</title>
+    <meta name="description" content="The digital home for EPS students. Find course selection information, updates, resources and more.">
+    <link rel="canonical" href="https://www.elginparksecondary.com/">
+    <link rel="icon" type="image/png" href="fav/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="fav/favicon.svg">
+    <link rel="shortcut icon" href="fav/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Elgin Park">
+    <link rel="manifest" href="fav/site.webmanifest">
 </head>
 
 <body>
@@ -53,8 +60,11 @@
 
                     <div id="deadline12">
                         COURSE SELECTION DEADLINE
-                        <br>
-                        <div id="CountdownDateGr12"></div>
+                        <!-- deadline goes here, use ISO 8601 format -->
+                        <time id="selection-deadline-time" datetime="2025-03-07T00:00:00-08:00">
+                            <span id="CountdownDateGr12"></span>
+                            <span id="deadline-date">March 7, 2025</span>
+                        </time>
                     </div>
 
 
@@ -189,17 +199,15 @@
 
     <br>
     </div>
-    <br><br>
-    <footer class="texts " id="land">The students and staff at Elgin Park Secondary work, learn, and play on the unceded and ancestral territories of the Katzie, Semihamoo, Kwantlen and other Coast Salish Peoples. As responsible members of the Elgin community, we recognize the importance
-        of taking the initiative to learn about and honour the history and traditions of the peoples whose lands we occupy. </footer>
-    <div id="soze">
-        <img id="pp1" src="kwantlen.png ">
-        <img id="pp1" src="katzie.png ">
-        <img id="pp1" src="semiahmoo.png ">
-    </div>
-
-
-    <br><br>
+    <footer class="texts" id="land">
+        The students and staff at Elgin Park Secondary work, learn, and play on the unceded and ancestral territories of the Katzie, Semihamoo, Kwantlen and other Coast Salish Peoples. As responsible members of the Elgin community, we recognize the importance
+        of taking the initiative to learn about and honour the history and traditions of the peoples whose lands we occupy.
+        <div id="soze">
+            <img id="pp1" src="kwantlen.png" alt="Kwantlen First Nation">
+            <img id="pp1" src="katzie.png" alt="Katzie First Nation">
+            <img id="pp1" src="semiahmoo.png" alt="Semiahmoo First Nation">
+        </div>
+    </footer>
     
     <script src="./one.js" type="module"></script>
     <script src="site_footer.js"></script>

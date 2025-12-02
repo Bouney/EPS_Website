@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="top_content.css">
     <link rel="stylesheet" href="forms.css">
-    <link rel="icon" type="image/x-icon" href="elgin_logo.png">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <title>Forms - Elgin Park Secondary</title>
+    <link rel="canonical" href="https://www.elginparksecondary.com/forms">
+    <link rel="icon" type="image/png" href="fav/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="fav/favicon.svg">
+    <link rel="shortcut icon" href="fav/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Elgin Park">
+    <link rel="manifest" href="fav/site.webmanifest">
 </head>
 
 <body>
@@ -19,6 +25,12 @@
     <div class="page-container">
         <h1 class="page-title">Forms (Downloads)</h1>
 
+        <!--
+            When adding a flowchart, please make it accessible by adding a link to the relevant
+            department page using div.accessible-link and create a list representation of the flowchart there.
+            (If there is no relevant department page, use <details> in the <div>.)
+        -->
+
         <div class="card-grid">
             <!-- Math Flowchart -->
             <div class="info-card">
@@ -26,6 +38,9 @@
                 <a href="math_flowchart.png" download>
                     <img src="math_flowchart.png" alt="Math Flowchart">
                 </a>
+                <div class="accessible-link">
+                    See <a href="mathematics">Mathematics</a> for accessible version
+                </div>
             </div>
 
             <!-- Selecting Courses -->
@@ -62,10 +77,37 @@
 
             <!-- Grade 7 Chart -->
             <div class="info-card">
-                <h3>Grade 7 - Chart 1</h3>
+                <h3>Grade 7 course selection guide</h3>
                 <a href="chart1.png" download>
-                    <img src="chart1.png" alt="Grade 7 Chart">
+                    <img src="chart1.png" alt="Grade 7 course selection guide">
                 </a>
+                <div class="accessible-link">
+                    <details><summary>Accessible version</summary>
+                        <ol aria-label="Grade 7 course selection guide list">
+                            <li>All students must take:<ul>
+                                <li>English 8</li>
+                                <li>Social Studies 8</li>
+                                <li>Mathematics 8</li>
+                                <li>Science 8</li>
+                                <li>Physical Education 8</li>
+                                <li><a href="languages">A French or Spanish option</a> depending on Grade 7</li>
+                                <li>An <abbr title="Applied Design, Skills and Technologies">ADST</abbr> rotation</li>
+                            </ul></li>
+                            <li>Decide if Band is right for you.<ul>
+                                <li>If yes: Choose Band + <abbr title="Physical Education">PE</abbr> and an <abbr title="Applied Design, Skills and Technologies">ADST</abbr> rotation</li>
+                                <li>If no: Choose <abbr title="Physical Education">PE</abbr>, a Fine Arts rotation and an <abbr title="Applied Design, Skills and Technologies">ADST</abbr> rotation</li>
+                            </ul></li>
+                            <li>Fill out your Grade 8 course selection form.<ul>
+                                <li>This is provided to parents of Grade 7 students entering Elgin Park.</li>
+                            </ul></li>
+                            <li><a href="contact">Contact your alpha counsellor</a> if you have any questions!</li>
+                            <li>Days to remember:<ul>
+                                <li>Course selection due: <time datetime="2025-02-07">February 7</time></li>
+                                <li>Whale of a Day (Grade 7s visit Elgin Park): <time datetime="2025-04-23">April 23</time></li>
+                            </ul></li>
+                        </ol>
+                    </details>
+                </div>
             </div>
 
             <!-- French Flowchart -->
@@ -74,6 +116,9 @@
                 <a href="French Flow Chart.pdf" download>
                     <img src="french_chart.png" alt="French Flowchart">
                 </a>
+                <div class="accessible-link">
+                    See <a href="languages">Languages</a> for accessible version
+                </div>
             </div>
         </div>
     </div>

@@ -25,6 +25,11 @@ body {
     padding-top: var(--navbar-height); /* Account for fixed navbar */
 }
 
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
 /* Navigation Bar */
 .l1 {
     list-style-type: none;

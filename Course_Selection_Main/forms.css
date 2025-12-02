@@ -10,28 +10,44 @@
     width: 100%;
 }
 
-.info-card a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    width: 100%;
-}
+.info-card {
+    a:has(img) {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        width: 100%;
+    }
 
-.info-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    transition: transform 0.2s ease-in-out;
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    h3 {
+        margin-bottom: 15px;
+        text-align: center;
+        color: #333;
+    }
+
+    .accessible-link {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 0.9em;
+
+        details {
+            color: black;
+            
+            :not(summary) {
+                text-align: left;
+            }
+        }
+    }
 }
 
 .info-card:hover img {
     transform: scale(1.02);
-}
-
-.info-card h3 {
-    margin-bottom: 15px;
-    text-align: center;
-    color: #333;
 }
 
 .info-card::after {
