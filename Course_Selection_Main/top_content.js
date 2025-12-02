@@ -3,38 +3,38 @@ document.addEventListener("DOMContentLoaded", function() {
     // Note: ElginParkOrcaImage is wrapped in an <a> tag pointing to index.html
     document.body.insertAdjacentHTML("afterbegin", `
         <ul class="l1">
-            <a href="index.html"><img src="./elgin_logo.png" id="ElginParkOrcaImage" alt="Elgin Park Orca Logo"></a>
+            <a href="/"><img src="./elgin_logo.png" id="ElginParkOrcaImage" alt="Elgin Park Orca Logo"></a>
             <div class="NavItem">
-                <li><button data-page="index.html" onclick="location.href='index.html'">Home</button></li>
-                <li><button data-page="cal.html" onclick="location.href='cal.html'">Calendar</button></li>
+                <li><button data-page="/" onclick="location.href='/'">Home</button></li>
+                <li><button data-page="cal" onclick="location.href='cal'">Calendar</button></li>
                 <li class="dropdown">
                     <button class="dropbtn1">Departments</button>
                     <div class="dropdown-content">
-                        <a class="dropbtn2" data-page="business.html" href="business.html">Business Education</a>
-                        <a class="dropbtn2" data-page="computers.html" href="computers.html">Computer Education</a>
-                        <a class="dropbtn2" data-page="careers.html" href="careers.html">Career Education</a>
-                        <a class="dropbtn2" data-page="ell.html" href="ell.html">English Language Learning</a>
-                        <a class="dropbtn2" data-page="fine_arts.html" href="fine_arts.html">Fine Arts</a>
-                        <a class="dropbtn2" data-page="home_ec.html" href="home_ec.html">Home Economics</a>
-                        <a class="dropbtn2" data-page="language_arts.html" href="language_arts.html">Language Arts</a>
-                        <a class="dropbtn2" data-page="languages.html" href="languages.html">Languages</a>
-                        <a class="dropbtn2" data-page="mathematics.html" href="mathematics.html">Mathematics</a>
-                        <a class="dropbtn2" data-page="physical_ed.html" href="physical_ed.html">Physical Education</a>
-                        <a class="dropbtn2" data-page="science.html" href="science.html">Sciences</a>
-                        <a class="dropbtn2" data-page="social_studies.html" href="social_studies.html">Social Studies</a>
-                        <a class="dropbtn2" data-page="tech_ed.html" href="tech_ed.html">Technology Education</a>
+                        <a class="dropbtn2" data-page="business" href="business">Business Education</a>
+                        <a class="dropbtn2" data-page="computers" href="computers">Computer Education</a>
+                        <a class="dropbtn2" data-page="careers" href="careers">Career Education</a>
+                        <a class="dropbtn2" data-page="ell" href="ell">English Language Learning</a>
+                        <a class="dropbtn2" data-page="fine_arts" href="fine_arts">Fine Arts</a>
+                        <a class="dropbtn2" data-page="home_ec" href="home_ec">Home Economics</a>
+                        <a class="dropbtn2" data-page="language_arts" href="language_arts">Language Arts</a>
+                        <a class="dropbtn2" data-page="languages" href="languages">Languages</a>
+                        <a class="dropbtn2" data-page="mathematics" href="mathematics">Mathematics</a>
+                        <a class="dropbtn2" data-page="physical_ed" href="physical_ed">Physical Education</a>
+                        <a class="dropbtn2" data-page="science" href="science">Sciences</a>
+                        <a class="dropbtn2" data-page="social_studies" href="social_studies">Social Studies</a>
+                        <a class="dropbtn2" data-page="tech_ed" href="tech_ed">Technology Education</a>
                     </div>
                 </li>
                 <li class="dropdown">
                     <button class="dropbtn1">Specialized Programs</button>
                     <div class="dropdown-content">
-                        <a class="dropbtn2" data-page="advanced_placement.html" href="advanced_placement.html">Advanced Placement</a>
-                        <a class="dropbtn2" data-page="leadership.html" href="leadership.html">Leadership</a>
+                        <a class="dropbtn2" data-page="advanced_placement" href="advanced_placement">Advanced Placement</a>
+                        <a class="dropbtn2" data-page="leadership" href="leadership">Leadership</a>
                     </div>
                 </li>
-                <li><button data-page="forms.html" onclick="location.href='forms.html'">Forms</button></li>
-                <li><button data-page="HybridLearning.html" onclick="location.href='HybridLearning.html'">Hybrid Learning</button></li>
-                <li><button data-page="contact.html" onclick="location.href='contact.html'">Contact</button></li>
+                <li><button data-page="forms" onclick="location.href='forms'">Forms</button></li>
+                <li><button data-page="HybridLearning" onclick="location.href='HybridLearning'">Hybrid Learning</button></li>
+                <li><button data-page="contact" onclick="location.href='contact'">Contact</button></li>
             </div>
         </ul>
     `);
