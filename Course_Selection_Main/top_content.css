@@ -1,12 +1,12 @@
 :root {
-    --navbar-height: 70px; 
+    --navbar-height: 70px;
     --header-img-height: 50px;
-    --header-img-width: 95px; 
+    --header-img-width: 95px;
     --navbar-background: #8830a3;
     --nav-link-color: #FFFFFF;
     --nav-link-hover-color: #e6e6ee;
     --nav-dropdown-content-hover-color: #000000;
-    --nav-link-active-underline: #FFD700; 
+    --nav-link-active-underline: #FFD700;
     --text-color: #333333;
     --card-background: #FFFFFF;
     --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -85,7 +85,7 @@ a:has(img#ElginParkOrcaImage) { /* Logo link */
     margin-right: 0; /* Remove margin since logo positioning is now independent */
 }
 
-.NavItem { 
+.NavItem {
     position: absolute; /* Take it out of normal flow */
     left: 0;
     right: 0;
@@ -126,6 +126,7 @@ a:has(img#ElginParkOrcaImage) { /* Logo link */
     padding: 0 15px; /* Keep horizontal padding */
     transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
     border-bottom: 3px solid transparent; /* For active/hover effect */
+    font-family: var(--font-family);
 }
 
 .NavItem .top-level:hover {

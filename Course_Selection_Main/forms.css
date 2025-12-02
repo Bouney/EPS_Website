@@ -11,6 +11,17 @@
 }
 
 .info-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+
     a:has(img) {
         text-decoration: none;
         color: inherit;
@@ -23,12 +34,20 @@
         height: auto;
         border-radius: 4px;
         transition: transform 0.2s ease-in-out;
+        max-width: 100%;
+        border: 1px solid #ddd;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     h3 {
+        margin-top: 0;
         margin-bottom: 15px;
         text-align: center;
         color: #333;
+        font-size: 1.4em;
+        font-weight: bold;
     }
 
     .accessible-link {
@@ -38,7 +57,7 @@
 
         details {
             color: black;
-            
+
             :not(summary) {
                 text-align: left;
             }

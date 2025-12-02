@@ -5,24 +5,24 @@ Background: #F0F2F5
 */
 
 :root { /* Ensure these variables are defined if not already in top_content.css or globally */
-    --navbar-background: #3A2E39; 
+    --navbar-background: #3A2E39;
     --text-color: #333333;
     --card-background: #FFFFFF;
 }
 
 /* General page container for content */
-.page-container {
+main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .page-title {
     font-size: 2.5em;
     font-weight: bold;
     color: var(--text-color);
-    margin-bottom: 40px;  
+    margin-bottom: 40px;
     text-align: left;
 }
 
@@ -41,11 +41,11 @@ Background: #F0F2F5
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     align-items: stretch;
-    width: 100%; 
+    width: 100%;
 }
 
 /* Each card describing a course */
-.info-card {
+article.info-card {
     background-color: var(--card-background);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -58,12 +58,12 @@ Background: #F0F2F5
     position: relative;
 }
 
-.info-card:hover {
+article.info-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-.info-card h3 { /* Title within the card */
+article.info-card h3 { /* Title within the card */
     font-size: 1.4em;
     font-weight: bold;
     color: var(--text-color);
@@ -71,14 +71,14 @@ Background: #F0F2F5
     margin-bottom: 10px;
 }
 
-.info-card .tags {
+article.info-card .tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 15px;
 }
 
-.info-card .tag {
+article.info-card .tag {
     padding: 5px 10px;
     border-radius: 4px;
     color: white;
@@ -96,7 +96,7 @@ Background: #F0F2F5
 
 .tag.type-tag-elective { background-color: #dc3545; }
 .tag.type-tag-required { background-color: #6f42c1; }
-.tag.credits-tag { background-color: #17a2b8; } 
+.tag.credits-tag { background-color: #17a2b8; }
 .tag.info-tag { background-color: #6c757d; } /* Generic info tag */
 
 /* Description paragraph */
@@ -108,20 +108,20 @@ Background: #F0F2F5
 }
 
 /* Styling for lists within description for better readability */
-.info-card ul,
-.info-card ol {
-    padding-left: 20px; 
-    margin-top: 5px; 
-    margin-bottom: 10px; 
+article.info-card ul,
+article.info-card ol {
+    padding-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
-.info-card li {
-    margin-bottom: 5px; 
+article.info-card li {
+    margin-bottom: 5px;
 }
 
 
 /* Course code goes bottom on content card */
-.info-card .item-identifier { /* For course codes, etc. */
+article.info-card .item-identifier { /* For course codes, etc. */
     font-size: 0.8em;
     color: #737373;
     padding-top: 10px;
@@ -129,8 +129,8 @@ Background: #F0F2F5
     margin-top: auto;
 }
 
-.info-card .action-link,
-.info-card .details-button {
+article.info-card .action-link,
+article.info-card .details-button {
     display: inline-block;
     margin-top: 15px;
     padding: 8px 15px;
@@ -143,8 +143,8 @@ Background: #F0F2F5
     align-self: flex-start; /* Aligns button to the start of the cross axis if card is flex column */
 }
 
-.info-card .action-link:hover,
-.info-card .details-button:hover {
+article.info-card .action-link:hover,
+article.info-card .details-button:hover {
     background-color: #503c4d; /* Darker shade of navbar-background */
 }
 
@@ -166,7 +166,7 @@ Background: #F0F2F5
     width: 100%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
     /* Maxwidth should not be needed */
-    /* max-width: 1200px; 
+    /* max-width: 1200px;
     margin-left: auto;  */
     margin-right: auto;
     margin-bottom: 20px;
@@ -185,21 +185,21 @@ Background: #F0F2F5
 }
 
 /* Styling for images within media-pair or standalone in cards */
-.info-card img,
+article.info-card img,
 .media-pair-container img,
 .content-section img { /* General image styling within these contexts */
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
     border-radius: 4px;
     border: 1px solid #ddd; /* Optional subtle border */
     display: block; /* Removes extra space below image if it's inline */
-    margin-top: 10px; 
-    margin-bottom: 10px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .media-pair-container img {
     max-width: 400px; /* Specific max-width if paired, adjust as needed */
-    width: 100%; 
+    width: 100%;
 }
 
 

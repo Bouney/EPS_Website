@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
   var calendarEl = document.getElementById("calendar");
   var calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: "dayGridMonth", 
+    initialView: "dayGridMonth",
     showNonCurrentDates: false, //depends if you wanna show other dates, too visually messy
     fixedWeekCount: false,
     headerToolbar: {
