@@ -157,7 +157,12 @@ h2 {
     color: #5a217e;
     font-weight: 600;
     background-color: lavender;
-    padding: .4em;
+    padding: 1em;
+    text-transform: uppercase;
+
+    abbr {
+      text-transform: none;
+    }
 }
 
 /* Big purple title */
