@@ -44,6 +44,13 @@ main {
     width: 100%;
 }
 
+/* Collapse to a single column on small screens */
+@media (max-width: 700px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Each card describing a course */
 article.info-card {
     background-color: var(--card-background);
