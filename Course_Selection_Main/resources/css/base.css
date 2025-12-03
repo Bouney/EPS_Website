@@ -35,6 +35,25 @@ a:active {
   color: #0F2050;
 }
 
+a#skip-to-main-link {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: #000;
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 2000;
+    transition: top 0.3s;
+}
+a#skip-to-main-link:focus {
+    top: 10px;
+}
+@media (prefers-reduced-motion: reduce) {
+    a#skip-to-main-link {
+        transition: none;
+    }
+}
+
 summary {
     cursor: pointer;
     font-weight: bold;
