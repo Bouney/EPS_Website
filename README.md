@@ -2,9 +2,9 @@
 
 ![1.00](https://elginparksecondary.com/elgin_logo.png)
 
-**Preview: https://main.eps-website-elssgin-twonfi.pages.dev/home**
+**https://www.elginparksecondary.com**
 
-Needs to be manually synced until this repo is transferred to the @elginpark organization and twonfi can set up Cloudflare Pages.
+Preview a branch: [branch].eps-website.pages.dev
 
 ***
 
@@ -18,24 +18,6 @@ The **EPS Website** is the digital platform for Elgin Park School, designed to p
 
 ***
 
-## 🆕 Changes
-
-### 🔹 **Gui Changes**
-
-* Go into detail
-
-### 🔹 **Club List**
-
-* Go into detail
-
-***
-
-## 🔧 Technologies Used
-
-* List technologies used
-
-***
-
 ## 💡 Contributors
 
 This project is made possible thanks to the hard work and dedication of the following members of the **EPS Computer Club**:
@@ -46,10 +28,12 @@ This project is made possible thanks to the hard work and dedication of the foll
 
 *Richard Fang*
 
-*Oliver Kihoi Guo*
+*Oliver Ki Hoi Guo*
 
 *Andrew Schutte*
 
 *Eric Li*
+
+*David Rong Xuan Duan*
 
 * **Enter your name here if you want to be recognized**

@@ -1,0 +1,222 @@
+/*
+Colours
+Background 1: #F0F2F5
+Background 2: lavender
+Table accent: #dee6ec
+Credit section accent: #6a5acd
+Contact section school colour: #5e3356
+
+*/
+
+#sectionerWhite,
+#sectionerAlt {
+    min-height: 100vh;
+    height: auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#sectionerWhite {
+    background-color: #F0F2F5;
+    padding: 40px 20px;
+}
+
+#sectionerAlt {
+    background-color: lavender;
+}
+
+#contactHeader {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#contactHeader h1 {
+    font-size: 2.7em;
+    color: #333;
+    margin-bottom: 20px;
+    /* margin-top: 50px; */
+}
+
+address {
+    font-style: normal;
+}
+
+#schoolContact {
+    background-color: #dee6ec;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#schoolContact h2 {
+    font-size:1.7em;
+    color: #5e3356;
+    margin-bottom: 15px;
+    margin-top : 10px;
+}
+
+#schoolContact p {
+    color:#333;
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+#counsellorsTable {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#counsellorsTable h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#counsellorsTable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+#counsellorsTable th {
+    font-size: 1.3em;
+    background-color: #6b2796;
+    color: white;
+    padding: 12px;
+    text-align: middle;
+}
+
+#counsellorsTable td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+}
+
+#counsellorsTable tr:nth-child(even) { /*counsellor table bg 2*/
+    background-color: #dee6ec;
+}
+
+#counsellorsTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+#counsellorsTable a {
+    color: #6322b9;
+    text-decoration: none;
+}
+
+#counsellorsTable a:hover {
+    text-decoration: underline;
+}
+
+#credits {
+    text-align: center;
+    padding: 0 20px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+#credits h2 {
+    font-size: 1.4em;
+    margin-bottom: 1.5em;
+    color: #333;
+}
+
+#credits img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.lit {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    list-style-type: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.lit li {
+    padding: 3px 3px 3px 15px;
+    text-align: left;
+    border-left: 1px solid #6a5acd;
+    margin-bottom: 2px;
+    font-size: 0.95em;
+}
+
+#article1Title {
+    font-size: 30px;
+    color: #40263B;
+    font-family: Garamond;
+}
+
+#article1 {
+    font-size: 30px;
+    color: #40263B;
+    font-family: Garamond;
+}
+
+#processInfo {
+    font-size: 18px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: justify;
+    margin-right: 50%;
+    font-family: arial;
+    line-height: 1.5;
+}
+
+#choosingCourses {
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: justify;
+    margin-left: 50px;
+}
+
+#theGraduationProgram {
+    font-size: 20px;
+    font-family: lato thin;
+    font-weight: 50;
+}
+
+
+table,
+td,
+tr {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+td {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 30%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+table {
+    border-style: none;
+    width: 100%;
+}
+
+#table1 {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: #6b2796;
+    margin: 10px 0;
+}
