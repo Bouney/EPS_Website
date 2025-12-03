@@ -1,8 +1,8 @@
 window.addEventListener("load", function () {
-  var calendarEl = document.getElementById("calendar");
-  var calendar = new FullCalendar.Calendar(calendarEl, {
+  const calendarEl = document.getElementById("calendar");
+  const calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: "dayGridMonth",
-    showNonCurrentDates: false, //depends if you wanna show other dates, too visually messy
+    showNonCurrentDates: false, // Too visually messy
     fixedWeekCount: false,
     headerToolbar: {
       left: "prev,next today",
@@ -23,8 +23,7 @@ window.addEventListener("load", function () {
           return {
             id: event.sid, // ON uses sid as unique event ID; schedule_id appears to be a calendar ID
             title: event.name,
-            start:
-              event.date + (event.start24 ? "T" + event.start24 : ""),
+            start: event.date + (event.start24 ? "T" + event.start24 : ""),
             end: event.end ? event.date + "T" + event.end : null,
             color: event.cal_mode ? "#593751" : "#6e3c8d",
             borderColor: event.cal_mode ? "#40263b" : "#6e3c8d",
