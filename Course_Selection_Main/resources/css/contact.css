@@ -67,6 +67,10 @@ address {
     margin: 0 auto;
 }
 
+caption {
+    margin-bottom: .4em;
+}
+
 #counsellorsTable h2 {
     text-align: center;
     font-size: 2em;
