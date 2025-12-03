@@ -1,0 +1,47 @@
+/* /cal */
+#calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#calendar {
+    width: 120%;
+    max-width: 1400px;
+    max-height: 800px;
+
+    min-height: 600px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+@media (max-width: 768px) {
+    #calendar {
+        min-height: 400px;
+        padding: 10px;
+    }
+}
+
+/* :root {
+    --fc-event-bg-color: #6e3c8d;
+    --fc-event-border-color: #6e3c8d;
+} */
+.fc-daygrid-event .fc-event-title {
+    overflow-x: auto; /*Scrollable as to not truncate text*/
+    white-space: nowrap;
+    max-width: 100%;
+    scrollbar-width: none;
+    padding: 2px;
+}
+
+h1 {
+    text-align: center;
+    margin: 1.3em 0;
+}
+
+.block-order {
+  text-align: center;
+}

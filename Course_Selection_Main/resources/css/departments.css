@@ -1,0 +1,307 @@
+/*CSS file for all of the courses page
+
+Colours:
+Background: #F0F2F5
+*/
+
+:root { /* Ensure these variables are defined if not already in top_content.css or globally */
+    --navbar-background: #3A2E39;
+    --text-color: #333333;
+    --card-background: #FFFFFF;
+}
+
+/* General page container for content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.page-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.page-subtitle {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-top: 30;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Grid container for content cards/items */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: stretch;
+    width: 100%;
+}
+
+/* Each card describing a course */
+article.info-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+article.info-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+article.info-card h3 { /* Title within the card */
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+article.info-card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+article.info-card .tag {
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.85em;
+    line-height: 1;
+}
+
+/* Course information tag colors */
+.tag.grade-tag-8 { background-color: #A6E1FA; color: #333; }
+.tag.grade-tag-9 { background-color: #007bff; }
+.tag.grade-tag-10 { background-color: #28a745; }
+.tag.grade-tag-11 { background-color: #ffc107; color: #333; }
+.tag.grade-tag-12 { background-color: #fd7e14; }
+
+.tag.type-tag-elective { background-color: #dc3545; }
+.tag.type-tag-required { background-color: #6f42c1; }
+.tag.credits-tag { background-color: #17a2b8; }
+.tag.info-tag { background-color: #6c757d; } /* Generic info tag */
+
+/* Description paragraph */
+.info-card p:not(.item-identifier), .description {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #555555;
+    margin: .35em 0;
+}
+
+/* Styling for lists within description for better readability */
+article.info-card ul,
+article.info-card ol {
+    padding-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+article.info-card li {
+    margin-bottom: 5px;
+}
+
+
+/* Course code goes bottom on content card */
+article.info-card .item-identifier { /* For course codes, etc. */
+    font-size: 0.8em;
+    color: #737373;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    margin-top: auto;
+}
+
+article.info-card .action-link,
+article.info-card .details-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: var(--navbar-background);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.2s;
+    align-self: flex-start; /* Aligns button to the start of the cross axis if card is flex column */
+}
+
+article.info-card .action-link:hover,
+article.info-card .details-button:hover {
+    background-color: #503c4d; /* Darker shade of navbar-background */
+}
+
+/* Container for pairing media like video and image, and centering them */
+.media-pair-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Changed from center to start for better alignment with text */
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*For embedded youtube videos*/
+.responsive-iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    /* Maxwidth should not be needed */
+    /* max-width: 1200px;
+    margin-left: auto;  */
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Styling for images within media-pair or standalone in cards */
+article.info-card img,
+.media-pair-container img,
+.content-section img { /* General image styling within these contexts */
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #ddd; /* Optional subtle border */
+    display: block; /* Removes extra space below image if it's inline */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.media-pair-container img {
+    max-width: 400px; /* Specific max-width if paired, adjust as needed */
+    width: 100%;
+}
+
+
+
+
+/* General text content styling, for sections outside cards or for general info */
+.content-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.content-section h2 { /* Sub-headings within a content section */
+    font-size: 1.6em;
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--page-background);
+    padding-bottom: 10px;
+}
+
+.content-section p,
+.content-section ul,
+.content-section ol {
+    font-size: 1em;
+    line-height: 1.7;
+    color: #444444;
+    margin-bottom: 15px;
+}
+
+.content-section ul,
+.content-section ol {
+    padding-left: 25px;
+}
+
+.content-section li {
+    margin-bottom: 8px;
+}
+
+/* Standalone button style (if needed outside cards) */
+.buttonC {
+    border-style: solid;
+    text-align: center;
+    font-weight: bold;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    outline: none;
+    color: #FFFFFF;
+    border-color: var(--navbar-background);
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: var(--navbar-background);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.buttonC:hover {
+    background-color: #503c4d;
+    color: #fff;
+}
+
+.buttonC:active {
+    background-color: #2c1e2a;
+    transform: translateY(1px);
+}
+
+/* Add this new section for the navigation buttons */
+.content-section nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.content-section nav .details-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #562774; /* Changed to match navbar background */
+    color: var(--nav-link-color);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: background-color 0.2s ease-in-out;
+    border: none;
+    text-align: center;
+    min-width: 120px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-section nav .details-button:hover {
+    background-color: #6b2682; /* Darker shade of the vibrant purple */
+    transform: translateY(-1px);
+}
+
+.content-section nav .details-button:active {
+    transform: translateY(0);
+}
+
+/* Make cards in same row share height */
+.card-grid::after {
+    content: '';
+    flex: auto;
+}

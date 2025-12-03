@@ -12,4 +12,3 @@ It merely copies the course selection folder
 from shutil import copytree
 
 copytree('../Course_Selection_Main', '../site')
-

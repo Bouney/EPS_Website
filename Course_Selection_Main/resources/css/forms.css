@@ -1,0 +1,79 @@
+/* inherit department traits */
+@import 'departments.css';
+
+/* two column wide instead of 3 */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 0;
+    width: 100%;
+}
+
+.info-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+
+    a:has(img) {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        transition: transform 0.2s ease-in-out;
+        max-width: 100%;
+        border: 1px solid #ddd;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #333;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+
+    .accessible-link {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 0.9em;
+
+        details {
+            color: black;
+
+            :not(summary) {
+                text-align: left;
+            }
+        }
+    }
+}
+
+.info-card:hover img {
+    transform: scale(1.02);
+}
+
+.info-card::after {
+    content: "Click to Download";
+    display: block;
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
