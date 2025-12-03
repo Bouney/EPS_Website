@@ -233,6 +233,7 @@ li.dropdown {
         flex-wrap: nowrap;
         align-items: stretch;
         justify-content: flex-start;
+        padding: 10px 0;
         max-height: calc(100vh - var(--navbar-height));
         overflow-y: auto;
         display: none;
