@@ -230,9 +230,9 @@ li.dropdown {
         height: auto;
         background-image: linear-gradient(to bottom right, #562774, #431f58);
         flex-direction: column;
+        flex-wrap: nowrap;
         align-items: stretch;
         justify-content: flex-start;
-        padding: 10px 0;
         max-height: calc(100vh - var(--navbar-height));
         overflow-y: auto;
         display: none;
@@ -270,6 +270,8 @@ li.dropdown {
 
     .dropdown {
         width: 100%;
+        display: block;
+        position: static;
     }
 
     .dropdown-content {
