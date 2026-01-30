@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Add navbar HTML
     // Note: ElginParkOrcaImage is wrapped in an <a> tag pointing to index.html
     document.body.insertAdjacentHTML("afterbegin", `
+        <a id="skip-to-main-link" href="#main">Skip to main content</a>
         <ul class="l1">
             <a href="/"><img src="/resources/img/logos/logo.png" id="ElginParkOrcaImage" alt="Elgin Park Orca Logo"></a>
             <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">

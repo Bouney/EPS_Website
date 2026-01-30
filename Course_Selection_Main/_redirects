@@ -1,3 +1,5 @@
 /favicon.ico /fav/favicon.ico 302
 /home.html / 301
 /calendar /cal 301
+/english /language_arts 301
+/english.html /language_arts 301
