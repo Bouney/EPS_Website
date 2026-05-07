@@ -17,7 +17,8 @@ window.addEventListener("load", function () {
         const response = await fetch(
           "/orca-news/data?api=a"
         );
-        const data = await response.json();
+        const rawText = await response.text();
+        const data = JSON.parse(rawText.replace(/[\x00-\x1F]/g, " "));
 
         const events = data.map((event) => {
           return {
